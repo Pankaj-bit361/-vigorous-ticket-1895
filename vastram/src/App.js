@@ -1,11 +1,12 @@
 
+import MainRoutes from './AllRoutes/MainRoutes';
 import './App.css';
 
 
 function App() {
   return (
     <div className="App">
-    <h1>Welcome To Vastram</h1>
+   <MainRoutes/>
     </div>
   );
 }
