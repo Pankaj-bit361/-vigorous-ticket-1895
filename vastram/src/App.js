@@ -1,11 +1,14 @@
-
+import MainRoutes from './AllRoutes/MainRoutes';
 import './App.css';
-
+import Footer from './components/Footer';
+import WithSubnavigation from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
-    <h1>Welcome To Vastram</h1>
+      <WithSubnavigation />
+      <MainRoutes />
+      <Footer />
     </div>
   );
 }
