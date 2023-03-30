@@ -2,12 +2,13 @@
 // import MainRoutes from './AllRoutes/MainRoutes';
 import Admin from './Admin/Admin';
 import './App.css';
+import Login from './pages/Login';
 
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to Vastram</h1>
+   <Login  />
     </div>
   );
 }
