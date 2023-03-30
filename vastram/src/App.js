@@ -1,14 +1,15 @@
 
 // import MainRoutes from './AllRoutes/MainRoutes';
 import Admin from './Admin/Admin';
+import MainRoutes from './AllRoutes/MainRoutes';
 import './App.css';
 
 
 function App() {
   return (
     <div className="App">
-   {/* <MainRoutes/> */}
-   <Admin />
+   <MainRoutes/>
+   {/* <Admin /> */}
     </div>
   );
 }
