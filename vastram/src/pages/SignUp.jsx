@@ -123,7 +123,11 @@ setTimeout(()=>{
        </Box>
       </form>
       <hr />
+<<<<<<< HEAD
    <div><span>Already have account? </span> <Link><span onClick={()=>navigate("/login")}>Sign In</span></Link> </div>
+=======
+   <div><span>Already have account? </span> <Link><span onClick={navigate("/login")}>Sign In</span></Link> </div>
+>>>>>>> 8032b4369510fa43cee217992043b472927f9926
     </div>
   )
 }

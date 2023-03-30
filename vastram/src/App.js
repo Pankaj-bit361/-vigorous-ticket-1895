@@ -1,11 +1,13 @@
-import logo from './logo.svg';
+
+// import MainRoutes from './AllRoutes/MainRoutes';
+import Admin from './Admin/Admin';
 import './App.css';
 
 
 function App() {
   return (
     <div className="App">
-   <MainRoutes/>
+      <h1>Welcome to Vastram</h1>
     </div>
   );
 }
