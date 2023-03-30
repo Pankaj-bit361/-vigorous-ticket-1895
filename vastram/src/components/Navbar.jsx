@@ -1,3 +1,5 @@
+// import logo from '../Image/img1.png'
+import logo from '../Image/HD-Logo.png'
 import {
   Box,
   Flex,
@@ -8,6 +10,7 @@ import {
   Collapse,
   Icon,
   Link,
+  Input,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -29,7 +32,14 @@ export default function WithSubnavigation() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
+
+  
     <Box>
+      <Box style={{backgroundColor:'black', height:'30px'}}>
+        <Box style={{color:'white', fontWeight:'bold', textAlign:'center'}}>
+        Up to 40% of* Get Coupon
+        </Box>
+      </Box>
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
@@ -53,18 +63,18 @@ export default function WithSubnavigation() {
             aria-label={'Toggle Navigation'}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+        {/* <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}> */}
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}>
-            Logo
+            color={useColorModeValue('gray.800', 'white')}  style={{width:'56%', margin:'auto', display:'flex'}}>
+            <img src={logo} alt='' style={{width:'35%'}}/>
+            <Input placeholder='What can we help you find?'  style={{marginTop:'10px', marginLeft:'18px', borderRadius:'3px', width:'50rem', border:'1px solid gray', height:'45px'}}/>
           </Text>
-
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+          {/* <Flex display={{ base: 'none', md: 'flex' }} ml={10}> */}
             <DesktopNav />
-          </Flex>
-        </Flex>
+          {/* </Flex> */}
+        {/* </Flex> */}
         <Button onClick={toggleColorMode}>
           {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
         </Button>
@@ -249,6 +259,7 @@ const MobileNavItem = ({ label, children, href }) => {
 };
 
 
+// multiple drop down
 
 const NAV_ITEMS = [
   {

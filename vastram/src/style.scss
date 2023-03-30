@@ -28,8 +28,8 @@
     }
 
     .up-img3-main {
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
 
         .up-img3-first {
 
@@ -43,6 +43,11 @@
                 width: 100%;
             }
         }
+    }
+
+    .up-img5-main{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
     }
 
     .up-img4-main {
@@ -85,10 +90,17 @@
         height: auto;
     }
     }
+
+    .up-img6-main{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .up-img7-main{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
 }
-
-
-
 
 
 
@@ -96,7 +108,7 @@
 
 
 //Large Screen
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 1201px){
     .main {
         margin: auto;
         height: auto;
@@ -121,8 +133,8 @@
         }
 
         .up-img3-main {
-            display: flex;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
 
             .up-img3-first {
 
@@ -136,6 +148,11 @@
                     width: 100%;
                 }
             }
+        }
+
+        .up-img5-main{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
         }
 
         .up-img4-main {
@@ -169,7 +186,6 @@
             }
         }
 
-        
     .botton-last-img{
 
         display: grid;
@@ -180,13 +196,129 @@
         width: 100%;
         height: auto;
     }
+    }
+
+    .up-img6-main{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .up-img7-main{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    }
+}
+
+// mid 
+@media only screen and (min-width: 750px) and (max-width: 1200px){
+    .main {
+        margin: auto;
+        height: auto;
+        width: 90%;
+
+        // up part
+        .up-img {
+
+            //1 img
+            img {
+                width: 100%;
+            }
+        }
+
+        .up-img2 {
+            margin-top: 35px;
+
+            //2 img
+            img {
+                width: 100%;
+            }
+        }
+
+        .up-img3-main {
+            display: grid;
+            margin-top: 10px;
+            grid-template-columns: repeat(2,1fr);
+
+            .up-img3-first {
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .up-img3-second {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .up-img5-main{
+            display: grid;
+            margin-top: 10px;
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        .up-img4-main {
+            display: flex;
+            margin-top: 50px;
+            justify-content: space-around;
+
+            .up-img4-first {
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .up-img4-second {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .bottom-images {
+            display: grid;
+            padding-top: 35px;
+            margin-top: 10px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            margin: auto;
+
+            .single-bottom-image{
+                width: 100%;
+                margin-top: 50px;
+                height: auto;
+            }
+        }
+        
+    .botton-last-img{
+
+        display: grid;
+        padding-top: 35px;
+        margin-top: 10px;
+        grid-template-columns: repeat(2,1fr);
+        
+    .bottom-last-single-img{
+        width: 100%;
+        height: auto;
+    }
+    }
+    .up-img6-main{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .up-img7-main{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
     }
     }
 }
 
 //Small Screen
 
-@media only screen and (min-width: 600px) {
+@media only screen and  (max-width: 749px) {
     .main {
         margin: auto;
         height: auto;
@@ -211,8 +343,8 @@
         }
 
         .up-img3-main {
-            display: flex;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
 
             .up-img3-first {
 
@@ -225,6 +357,30 @@
                 img {
                     width: 100%;
                 }
+            }
+        }
+        .up-img5-main{
+            display: grid;
+            padding-top: 50px;
+            grid-template-columns: repeat(1,1fr);
+
+            .img1{
+                padding-bottom: 20px;
+            }
+            .img2{
+                padding-bottom: 20px;
+            }
+            .img3{
+                padding-bottom: 20px;
+            }
+            .img4{
+                padding-bottom: 20px;
+            }
+            .img5{
+                padding-bottom: 20px;
+            }
+            .img6{
+                padding-bottom: 20px;
             }
         }
 
@@ -250,12 +406,14 @@
         .bottom-images {
             display: grid;
             padding-top: 35px;
-            grid-template-columns: repeat(4, 1fr);
+            margin-top: 10px;
+            grid-template-columns: repeat(1, 1fr);
             grid-template-rows: auto;
             margin: auto;
 
             .single-bottom-image{
                 width: 100%;
+                margin-top: 50px;
                 height: auto;
             }
         }
@@ -265,12 +423,25 @@
 
         display: grid;
         padding-top: 35px;
-        grid-template-columns: repeat(4,1fr);
+        margin-top: 10px;
+        grid-template-columns: repeat(1,1fr);
         
     .bottom-last-single-img{
         width: 100%;
         height: auto;
     }
+    }
+    .up-img6-main{
+        display: grid;
+        margin-top: 50px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .up-img6-first{
+        margin-bottom: 33px;
+    }
+    .up-img7-main{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
     }
     }
 }

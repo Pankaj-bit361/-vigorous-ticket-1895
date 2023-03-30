@@ -86,11 +86,11 @@ const Home = () => {
       </div>
 
       {/* double img */}
-      <div className='up-img3-main'>
-        <div className='up-img3-first'>
+      <div className='up-img6-main'>
+        <div className='up-img6-first'>
           <img src='https://belk.scene7.com/is/image/Belk/wk09_032723_hp_2c1?$DWP_PHOTO$' alt='' />
         </div>
-        <div className='up-img3-main-second'>
+        <div className='up-img6-main-second'>
           <img src='https://belk.scene7.com/is/image/Belk/wk09_032723_hp_2c2?$DWP_PHOTO$' alt='' />
         </div>
       </div>
@@ -139,23 +139,23 @@ const Home = () => {
       </div>
 
       {/* six img */}
-      <div className='up-img3-main'>
-        <div className='up-img3-first'>
+      <div className='up-img5-main'>
+        <div className='img1'>
           <img src='https://belk.scene7.com/is/image/Belk/wk09_2023_coupons_hp_6c_carl1?$DWP_PHOTO$' alt='' />
         </div>
-        <div className='up-img3-main-second'>
+        <div className='img2'>
           <img src='https://belk.scene7.com/is/image/Belk/wk09_2023_coupons_hp_6c_carl2?$DWP_PHOTO$' alt='' />
         </div>
-        <div className='up-img3-main-second'>
+        <div className='img3'>
           <img src='https://belk.scene7.com/is/image/Belk/wk09_2023_coupons_hp_6c_carl3?$DWP_PHOTO$' alt='' />
         </div>
-        <div className='up-img3-main-second'>
+        <div className='img4'>
           <img src='https://belk.scene7.com/is/image/Belk/wk09_2023_coupons_hp_6c_carl4?$DWP_PHOTO$' alt='' />
         </div>
-        <div className='up-img3-main-second'>
+        <div className='img5'>
           <img src='https://belk.scene7.com/is/image/Belk/wk09_2023_coupons_hp_6c_carl5?$DWP_PHOTO$' alt='' />
         </div>
-        <div className='up-img3-main-second'>
+        <div className='img6'>
           <img src='https://belk.scene7.com/is/image/Belk/wk09_2023_coupons_hp_6c_carl6?$DWP_PHOTO$' alt='' />
         </div>
       </div>
@@ -186,11 +186,11 @@ const Home = () => {
       </div>
 
       {/* double img2 */}
-      <div className='up-img3-main' style={{ marginTop: '30px' }}>
-        <div className='up-img3-first'>
+      <div className='.up-img7-main' style={{ marginTop: '30px', display:'flex' , justifyContent:'space-around'}}>
+        <div className='img1'>
           <img src='https://belk.scene7.com/is/image/Belk/wk08_2023_promshop_hp_2c1?$DWP_PHOTO$' alt='' />
         </div>
-        <div className='up-img3-main-second'>
+        <div className='img2'>
           <img src='https://belk.scene7.com/is/image/Belk/wk05_2023_trendedit_2c2_right?$DWP_PHOTO$' alt='' />
         </div>
       </div>
