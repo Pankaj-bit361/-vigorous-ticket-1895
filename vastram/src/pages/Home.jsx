@@ -26,6 +26,7 @@ const images = [
   {url : `https://belk.scene7.com/is/image/Belk/wk05_022723_hp_fob_4c13?$DWP_PHOTO$`},
   {url : `https://belk.scene7.com/is/image/Belk/wk05_022723_hp_fob_4c14?$DWP_PHOTO$`},
   {url : `https://belk.scene7.com/is/image/Belk/wk05_022723_hp_fob_4c15?$DWP_PHOTO$`},
+  {url : `https://belk.scene7.com/is/image/Belk/wk05_022723_hp_fob_4c15?$DWP_PHOTO$`},
 ]
 
 const imagesLast = [
