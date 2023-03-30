@@ -14,9 +14,9 @@ export const loginfailure=()=>{
 
 export const getloginsucces=(payload)=>{
     return {type:GET_LOGIN_SUCCESS,payload}
-<<<<<<< HEAD
+
 }
 
-=======
-}
->>>>>>> 8032b4369510fa43cee217992043b472927f9926
+
+
+
