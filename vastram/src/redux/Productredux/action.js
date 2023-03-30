@@ -29,3 +29,13 @@ export const deletesuccess=()=>{
 
 
 export const getproducts=async(dispatch)=>{
+
+    dispatch(loginrequest)
+  return  axios.get(`https://determined-gold-jaguar.cyclic.app/men`)
+    .then((res)=>{
+        dispatch(getsuccess(res.data))
+    })
+    .catch(()=>{
+        dispatch(loginfailure)
+    })
+    }
