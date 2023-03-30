@@ -63,7 +63,7 @@ export default function WithSubnavigation() {
             aria-label={'Toggle Navigation'}
           />
         </Flex>
-        {/* <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}> */}
+        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
@@ -71,10 +71,10 @@ export default function WithSubnavigation() {
             <img src={logo} alt='' style={{width:'35%'}}/>
             <Input placeholder='What can we help you find?'  style={{marginTop:'10px', marginLeft:'18px', borderRadius:'3px', width:'50rem', border:'1px solid gray', height:'45px'}}/>
           </Text>
-          {/* <Flex display={{ base: 'none', md: 'flex' }} ml={10}> */}
+          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
-          {/* </Flex> */}
-        {/* </Flex> */}
+          </Flex>
+        </Flex>
         <Button onClick={toggleColorMode}>
           {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
         </Button>
