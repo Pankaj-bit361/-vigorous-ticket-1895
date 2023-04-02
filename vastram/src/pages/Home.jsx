@@ -1,5 +1,4 @@
 import React from 'react'
-// import '../style.scss'
 import '../style.scss'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -7,7 +6,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from "swiper";
 import { Image } from '@chakra-ui/react'
-
+import WithSubnavigation from '../components/Navbar';
+import LargeWithAppLinksAndSocial from "../components/Footer"
 
 const images = [
   {url : `https://belk.scene7.com/is/image/Belk/wk05_022723_hp_fob_4c1?$DWP_PHOTO$`},
@@ -26,7 +26,6 @@ const images = [
   {url : `https://belk.scene7.com/is/image/Belk/wk05_022723_hp_fob_4c13?$DWP_PHOTO$`},
   {url : `https://belk.scene7.com/is/image/Belk/wk05_022723_hp_fob_4c14?$DWP_PHOTO$`},
   {url : `https://belk.scene7.com/is/image/Belk/wk05_022723_hp_fob_4c15?$DWP_PHOTO$`},
-  {url : `https://belk.scene7.com/is/image/Belk/wk05_022723_hp_fob_4c15?$DWP_PHOTO$`},
 ]
 
 const imagesLast = [
@@ -36,10 +35,11 @@ const imagesLast = [
   {url : `https://belk.scene7.com/is/image/Belk/wk03_2022_services_4c_4?$DWP_PHOTO$`},
 ]
 
-const Home = () => {
+export const Home = () => {
   return (
-
-    // main
+    <>
+<WithSubnavigation/>
+   
     <div className='main'>
 
       {/* up part */}
@@ -236,7 +236,8 @@ const Home = () => {
         </div>
       {/* end main */}
     </div>
-
+    <LargeWithAppLinksAndSocial/>
+</>
   )
 }
 

@@ -1,19 +1,23 @@
-
-// import MainRoutes from './AllRoutes/MainRoutes';
-import Admin from './Admin/Admin';
-import MainRoutes from './AllRoutes/MainRoutes';
+import logo from './logo.svg';
 import './App.css';
-
-import MainRoutes from "./AllRoutes/MainRoutes";
-import "./App.css";
-import Footer from "./components/Footer";
+import {MainRoutes} from './components/MainRoutes';
+import {Login} from './pages/Login'
+import Mens from './pages/Mens';
 import WithSubnavigation from "./components/Navbar";
+import LargeWithAppLinksAndSocial from './components/Footer';
+
 
 function App() {
   return (
     <div className="App">
+      {/* <WithSubnavigation/> */}
    <MainRoutes/>
-   {/* <Admin /> */}
+{/* <SingleProductPages/> */}
+     {/* <Signup/> */}
+
+     {/* <Login/> */}
+     {/* <Mens/> */}
+    
     </div>
   );
 }
