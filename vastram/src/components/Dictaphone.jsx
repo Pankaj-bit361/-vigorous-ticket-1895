@@ -39,7 +39,7 @@ setsearch(`${site}`)
 
 
 {
-  command:'hello *',
+  command:'Chitti *',
   callback:(site)=>{
 
 setinput(`${site}`)
@@ -53,7 +53,7 @@ setinput(`${site}`)
 }
 ,
 {
-  command:"switch to night mode",
+  command:"night mode",
   callback:(colour)=>{
     document.body.style.background ="black";
     document.body.style.color="white"
@@ -71,7 +71,7 @@ setinput(`${site}`)
 ,
 
 {
-  command:"change background colour to *",
+  command:"change colour to *",
   callback:(colour)=>{
     document.body.style.background =colour;
     

@@ -208,7 +208,7 @@ const Checkout = () => {
                                         <Stack spacing='5'>
                                             <Box>
                                                 <Flex>
-                                                    <Radio size='lg' value='Free Shipping @ $59' name={'order'} onChange={(e) => { handleChange(e) }}></Radio>
+                                                    <Radio size='lg' value='Free Shipping ' name={'order'} onChange={(e) => { handleChange(e) }}></Radio>
                                                     <Box ml='3'>
 
                                                         <Text fontWeight='bold'>
@@ -268,7 +268,7 @@ const Checkout = () => {
                                 <Box>
                                     <Flex alignItems={'center'} justifyContent={'space-between'} width={'100%'}>
                                         <Text fontWeight={'400'}>SubTotal </Text>
-                                        <Text fontWeight={'400'}  >${totalprice}</Text>
+                                        <Text fontWeight={'400'}  >$ 4603</Text>
                                     </Flex>
                                     <Flex alignItems={'center'} justifyContent={'space-between'} width={'100%'}>
                                         <Text fontWeight={'400'}>Est. Shipping (vastram)</Text>
@@ -278,10 +278,10 @@ const Checkout = () => {
                                 <Box>
                                     <Flex alignItems={'center'} justifyContent={'space-between'} width={'100%'}>
                                         <Text fontWeight={'bold'}>Estimated Total</Text>
-                                        <Text fontWeight={'bold'}  >$614</Text>
+                                        <Text fontWeight={'bold'}  >$ 4603</Text>
                                     </Flex>
                                     <Text>
-                                        or 4 interest-free payments of $153.50 with
+                                        or 4 interest-free payments of $657.57 with
                                     </Text>
                                     <Image src={afterpay} alt='afterpay' width={'30%'} height={'60%'} />
 

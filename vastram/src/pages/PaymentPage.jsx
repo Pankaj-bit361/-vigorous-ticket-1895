@@ -293,8 +293,8 @@ const PaymentPage = () => {
                             <Stack divider={<StackDivider />} spacing='4'>
                                 <Box>
                                     <Flex alignItems={'center'} justifyContent={'space-between'} width={'100%'}>
-                                        <Text fontWeight={'400'}>SubTotal (x7 items)</Text>
-                                        <Text fontWeight={'400'}  >$614</Text>
+                                        <Text fontWeight={'400'}>SubTotal </Text>
+                                        <Text fontWeight={'400'}  >$ 4603</Text>
                                     </Flex>
                                     <Flex alignItems={'center'} justifyContent={'space-between'} width={'100%'}>
                                         <Text fontWeight={'400'}>Est. Shipping (vastram)</Text>
@@ -304,10 +304,10 @@ const PaymentPage = () => {
                                 <Box>
                                     <Flex alignItems={'center'} justifyContent={'space-between'} width={'100%'}>
                                         <Text fontWeight={'600'}>Estimated Total</Text>
-                                        <Text fontWeight={'600'}  >$614</Text>
+                                        <Text fontWeight={'600'}  >$ 4603</Text>
                                     </Flex>
                                     <Text>
-                                        or 4 interest-free payments of $153.50 with
+                                        or 4 interest-free payments of $657.57 with
                                     </Text>
                                     <Image src={afterpay} alt='afterpay' width={'30%'} height={'60%'} />
 

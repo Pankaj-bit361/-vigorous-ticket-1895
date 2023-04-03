@@ -64,7 +64,7 @@ useEffect(()=>{
           color:searchparams.getAll("color"),
         _limit:18,
        _page:page,
-       _sort:"off_price",
+       _sort:"price",
        _order:sort
         }
       }
@@ -115,8 +115,8 @@ const handlethree=()=>{
     <Image  w={"100%"} src={item.image}></Image>
     <Text mt={"2%"} textAlign={"center"}>{item.title}</Text>
     <Text  mt={"2%"} >{item.brand}</Text>
-    <Text  mt={"2%"} >${discount?Math.floor(item.off_price-item.off_price/10):item.off_price} <span style={{color:"red"}}>After Coupon</span></Text>
-    <del  >${item.price}</del>
+   
+    <Text  >${item.price}</Text>
     <Text  mt={"2%"} > {+item.rating<=5 && +item.rating>=4?`${item.rating} ★★★★✪`:+item.rating<=4 && +item.rating>=3?`${item.rating} ★★★✪✫`:+item.rating<=3 && +item.rating>=2?`${item.rating} ★★✪✫✫`:+item.rating<=2 && +item.rating>=1?`${item.rating} ★✪✫✫✫`:`${item.rating} ✪✫✫✫✫`}</Text>
    <Link to={`/kids/${item.id}`}> <Button mb={"2%"} colorScheme={"orange"}>View Details</Button></Link>
     </Box>

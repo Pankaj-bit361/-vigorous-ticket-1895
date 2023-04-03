@@ -63,12 +63,12 @@ const handledone=()=>{
                 //border='2px solid pink'
                 direction={['column', 'column', 'row']} spacing={'25px'} margin={'auto'} width={{ base: '100%', md: '100%', lg: '95%' }} mb={'20px'}>
 
-                <Box
+               <Box
                     width={'30%'}
                     m={'auto'}
                 
                 >
-                    <img src={image} alt={'logo'} width={'100%'} height={30} />
+                   <Link to="/">  <img src={image} alt={'logo'} width={'100%'} height={30} /> </Link>
                 </Box>
                 <Box width={{ base: '100%', lg: '80%' }}
                     //border={'1px solid red'} 
@@ -155,7 +155,7 @@ const handledone=()=>{
                                 <Box>
                                     <Flex alignItems={'center'} justifyContent={'space-between'} width={'100%'}>
                                         <Text fontWeight={'400'}>SubTotal (x7 items)</Text>
-                                        <Text fontWeight={'400'}  >$614</Text>
+                                        <Text fontWeight={'400'}  >$ 4603</Text>
                                     </Flex>
                                     <Flex alignItems={'center'} justifyContent={'space-between'} width={'100%'}>
                                         <Text fontWeight={'400'}>Est. Shipping (vastram)</Text>
@@ -165,10 +165,10 @@ const handledone=()=>{
                                 <Box>
                                     <Flex alignItems={'center'} justifyContent={'space-between'} width={'100%'}>
                                         <Text fontWeight={'600'}>Estimated Total</Text>
-                                        <Text fontWeight={'600'}  >$614</Text>
+                                        <Text fontWeight={'600'}  >$ 4603</Text>
                                     </Flex>
                                     <Text>
-                                        or 4 interest-free payments of $153.50 with
+                                        or 4 interest-free payments of $ 6537.57 with
                                     </Text>
                                     <Image src={afterpay} alt='afterpay' width={'30%'} height={'60%'} />
 
