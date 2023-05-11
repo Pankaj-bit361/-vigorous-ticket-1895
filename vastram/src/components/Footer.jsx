@@ -60,7 +60,7 @@ export default function LargeWithAppLinksAndSocial() {
         <hr style={{ marginTop: "50px", border: "1px solid gray" }} />
       </Box>
       <Container as={Stack} maxW={"6xl"} py={10}>
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
+        <SimpleGrid columns={{ base: 2, sm: 2, md: 4 }} spacing={"10%"}>
           <Stack align={"flex-start"}>
             <ListHeader>Customer Service</ListHeader>
             <Link href={"#"}>Contact Us</Link>
@@ -78,7 +78,7 @@ export default function LargeWithAppLinksAndSocial() {
               style={{
                 border: "1px solid blue",
                 color: "blue",
-                padding: "20px 70px",
+                padding: "4%",
               }}
             >
               Apply Now
@@ -112,6 +112,7 @@ export default function LargeWithAppLinksAndSocial() {
         style={{ display: "flex", justifyContent: "space-around" }}
         borderTopWidth={1}
         borderStyle={"solid"}
+        mt={"5%"}
         borderColor={useColorModeValue("gray.900", "gray.700")}
       >
         <Container
@@ -120,27 +121,27 @@ export default function LargeWithAppLinksAndSocial() {
           py={4}
           direction={{ base: "column", md: "row" }}
           spacing={4}
-          justify={{}}
-          align={{ md: "center" }}
+          justify={"center"}
         >
-          <Text>Stay Connected</Text>
-          <Stack direction={"row"} spacing={6}>
+          <Text fontSize={"2xl"} fontWeight={"700"} >Stay Connected</Text>
+          <Stack direction={"row"} spacing={6} alignItems={"center"} m="auto">
             <SocialButton label={"Twitter"} href={"#"}>
-              <FaTwitter style={{ width: "300px", height: "35px" }} />
+              <FaTwitter style={{ width: "100%", height: "4vh" }} />
             </SocialButton>
             <SocialButton label={"YouTube"} href={"#"}>
-              <FaYoutube style={{ width: "300px", height: "35px" }} />
+              <FaYoutube style={{ width: "100%", height: "4vh" }} />
             </SocialButton>
             <SocialButton label={"Instagram"} href={"#"}>
-              <FaInstagram style={{ width: "300px", height: "35px" }} />
+              <FaInstagram style={{ width: "100%", height: "4vh" }} />
             </SocialButton>
           </Stack>
           <Box>
             <Input
+            md="center"
               style={{
-                width: "250px",
+                width: "60%",
                 height: "45px",
-                marginLeft: "100px",
+                marginLeft: "8%",
                 borderRadius: "1px",
                 borderTop: "1px solid gray",
                 borderBottom: "1px solid gray",
@@ -161,23 +162,22 @@ export default function LargeWithAppLinksAndSocial() {
           </Box>
         </Container>
       </Box>
-          <Box style={{marginLeft:'120px', marginTop:'10px'}}>
-            <Link href={"#"} style={{paddingLeft:'50px'}}>Terms of Use</Link>
-            <Link href={"#"} style={{paddingLeft:'50px'}}>Privacy Policy</Link>
+          <Box m="auto" w="80%">
+            <Link href={"#"} style={{paddingLeft:'2%'}}>Terms of Use</Link>
+            <Link href={"#"} style={{paddingLeft:'2%'}}>Privacy Policy</Link>
             <Link href={"#"}
-            style={{paddingLeft:'50px'}}>Enable Accessibility</Link>
-            <Link href={"#"} style={{paddingLeft:'50px'}}>Site Map</Link>
-            <Link href={"#"} style={{paddingLeft:'50px'}}>Feedback</Link>
-            <Link href={"#"} style={{paddingLeft:'50px'}}>CA Transparency</Link>
-            <Link href={"#"} style={{paddingLeft:'50px'}}>Personal Information</Link>
+            style={{paddingLeft:'4%'}}>Enable Accessibility</Link>
+            <Link href={"#"} style={{paddingLeft:'2%'}}>Site Map</Link>
+            <Link href={"#"} style={{paddingLeft:'2%'}}>Feedback</Link>
+            <Link href={"#"} style={{paddingLeft:'2%'}}>CA Transparency</Link>
           </Box>
-          <Box style={{marginLeft:'120px', marginTop:'10px'}}>
-          <Link href={"#"}  style={{paddingLeft:'50px'}}>Behind the Brand</Link>
-            <Link href={"#"} style={{paddingLeft:'50px'}}>Vendor Resources</Link>
-            <Link href={"#"} style={{paddingLeft:'50px'}}>Store Events</Link>
-            <Link href={"#"} style={{paddingLeft:'50px'}}>Careers</Link>
-            <Link href={"#"} style={{paddingLeft:'50px'}}>Catalogs & Ads</Link>
-            <Link href={"#"} style={{paddingLeft:'50px'}}>Brands We Carry</Link>
+          <Box m="auto" mt="1%" pb={"10%"}>
+          <Link href={"#"}  style={{paddingLeft:'2%'}}>Behind the Brand</Link>
+            <Link href={"#"} style={{paddingLeft:'2%'}}>Vendor Resources</Link>
+            <Link href={"#"} style={{paddingLeft:'2%'}}>Store Events</Link>
+            <Link href={"#"} style={{paddingLeft:'2%'}}>Careers</Link>
+            <Link href={"#"} style={{paddingLeft:'2%'}}>Catalogs & Ads</Link>
+            <Link href={"#"} style={{paddingLeft:'2%'}}>Brands We Carry</Link>
           </Box>
     </Box>
   );

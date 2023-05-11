@@ -66,7 +66,7 @@ dispatch(logintry(adddetails))
        
         <div >
         <h4>Personal information</h4>
-        <Input type="text" placeholder='First Name' name="FirstName" onChange={handleChange} value={adddetails.FirstName}/>
+        <Input  type="text" placeholder='First Name' name="FirstName" onChange={handleChange} value={adddetails.FirstName}/>
         <br/>
         <Input type="text" placeholder='Last Name' name="LastName" onChange={handleChange} value={adddetails.LastName}  />
         </div>
@@ -128,9 +128,11 @@ dispatch(logintry(adddetails))
        </Box>
       </form>
       <hr className="hr"/>
-   <div><span>Already have account? </span> <Link><span >Sign In</span></Link> </div>
+   <div><span>Already have account? </span> <Link to="/login"><span >Sign In</span></Link> </div>
     </div>
     <LargeWithAppLinksAndSocial/>
     </>
   )
 }
+
+export default Signup

@@ -144,19 +144,19 @@ export const Home = () => {
         <div className='img1'>
           <img src='https://belk.scene7.com/is/image/Belk/wk09_2023_coupons_hp_6c_carl1?$DWP_PHOTO$' alt='' />
         </div>
-        <div className='img2'>
+        <div className='img1'>
           <img src='https://belk.scene7.com/is/image/Belk/wk09_2023_coupons_hp_6c_carl2?$DWP_PHOTO$' alt='' />
         </div>
-        <div className='img3'>
+        <div className='img1'>
           <img src='https://belk.scene7.com/is/image/Belk/wk09_2023_coupons_hp_6c_carl3?$DWP_PHOTO$' alt='' />
         </div>
-        <div className='img4'>
+        <div className='img1'>
           <img src='https://belk.scene7.com/is/image/Belk/wk09_2023_coupons_hp_6c_carl4?$DWP_PHOTO$' alt='' />
         </div>
-        <div className='img5'>
+        <div className='img1'>
           <img src='https://belk.scene7.com/is/image/Belk/wk09_2023_coupons_hp_6c_carl5?$DWP_PHOTO$' alt='' />
         </div>
-        <div className='img6'>
+        <div className='img1'>
           <img src='https://belk.scene7.com/is/image/Belk/wk09_2023_coupons_hp_6c_carl6?$DWP_PHOTO$' alt='' />
         </div>
       </div>

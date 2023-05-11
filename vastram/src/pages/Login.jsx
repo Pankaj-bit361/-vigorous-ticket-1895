@@ -35,10 +35,15 @@ axios.get(`https://63f87b1f5b0e4a127de6dd05.mockapi.io/survey/users`)
 
 
 const onsubmit=async()=>{
-  
+  let flag=false
+
+
+//for(var i=0;i<)
+
   data.map((item)=>{
 if(checkemail==="admin123@gmail.com" && checkpss==="admin"){
-  navigate("/Admin")
+  navigate("/Admin");
+  flag=true
 }
 
 
@@ -51,10 +56,24 @@ else if    (item.Email===checkemail && item.Password===checkpss){
         timer: 1500
       })
       navigate("/")
+    flag=true;
+    
+    
     }
   
 
   })
+console.log(flag)
+
+if(flag===false){
+  Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: "Wrong email or password",
+   
+  })
+}
+
 }
 console.log(data)
 // const clicked=()=>{
@@ -180,5 +199,3 @@ function onOtpVerify(){
 </>
   )
 }
-
-
