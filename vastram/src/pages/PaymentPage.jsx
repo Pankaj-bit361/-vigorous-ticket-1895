@@ -506,7 +506,7 @@ const PaymentPage = () => {
                 <Text>{shipping?.address1}</Text>
                 <Text>{shipping?.address2}</Text>
                 <Text>
-                  {shipping?.city} {shipping?.state} {shipping.zipcode}
+                  {shipping?.city} {shipping?.state} {shipping?.zipcode}
                 </Text>
                 <Text>{shipping?.phone}</Text>
               </Box>
