@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-import { Box, Button, Flex, Image, Text, Textarea } from "@chakra-ui/react";
+import { Box, Button, Flex, Image , Text, Textarea } from "@chakra-ui/react";
 import axios from "axios";
 import logo from "../images/HD-Logo.png";
 import { Dictaphone } from "./Dictaphone";
@@ -58,7 +58,10 @@ export const Chatbot = () => {
       <Box class="chat">
         <Box class="chat-title">
           <Flex class="avatar">
+         
+
             <Image mb={"2%"} m={"auto"} w={"100px"} h={"50px"} src={logo} />
+        
             <Box w={"10%"} m={"auto"}>
               <Dictaphone setinput={setinput} />
             </Box>

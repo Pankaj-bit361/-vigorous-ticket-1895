@@ -1,8 +1,8 @@
 
-
 import { useState } from 'react';
 import {MensProducts} from "../components/MenProducts"
 import {Sidebar} from "../components/Sidebar"
+
 export const Mens = () => {
   const [discount,setdiscount]=useState("")
 

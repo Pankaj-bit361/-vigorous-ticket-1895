@@ -21,7 +21,7 @@ const [change,setchnage]=useState(true)
 const [change2,setchange2]=useState(true)
 
 
-///
+//
 const navigate=useNavigate()
 const [data,setdata]=useState([])
 const[checkemail,setcheckemail]=useState("")
@@ -32,7 +32,6 @@ axios.get(`https://63f87b1f5b0e4a127de6dd05.mockapi.io/survey/users`)
 .then((res)=>setdata(res.data))
  
 }, [])
-
 
 const onsubmit=async()=>{
   let flag=false

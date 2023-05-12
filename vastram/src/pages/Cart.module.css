@@ -1,6 +1,7 @@
 .Shopping_cart_heading p:nth-child(1) {
     letter-spacing: 1.2px;
     color: #17274a;
+    /* border: 3px solid green; */
     font: normal normal bold 24px/24px "Visuelt Pro", sans-serif;
     margin: 0;
 }
@@ -18,18 +19,30 @@
 .Shopping_cart_heading {
     height: 80px;
     display: flex;
+    /* border: 3px solid blue; */
     align-items: center;
     padding: 20px;
 }
 
+
 .Order_summmary_div p:nth-child(1) {
     margin: 5px 0 15px 0;
     padding: 0;
+    /* border: 3px solid blue; */
     font: normal normal bold 24px/28px "Visuelt Pro", sans-serif;
     letter-spacing: 1.2px;
     color: #1e3352;
     text-transform: uppercase;
 }
+
+.Order_summmary_div{
+    /* border: 3px solid orangered; */
+}
+.MainDivOrder{
+    /* border: 3px solid green; */
+    /* display: flex; */
+}
+
 .Order_summmary_div p:nth-child(2),
 .Order_summmary_div p:nth-child(3),
 .Order_summmary_div p:nth-child(4) {
@@ -112,3 +125,10 @@ background-color: #ffc439cc;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+
+
+/* @media screen and (max-width: 450px){
+    .MainDivOrder{
+        flex-direction: column;
+    }
+} */

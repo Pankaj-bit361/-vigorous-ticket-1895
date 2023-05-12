@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import CartMap from "../components/Cartmap";
 import EmptyCart from "../components/EmptyCart";
 import styles from "./Cart.module.css";
+
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import {
     deleteCartdata,
@@ -76,7 +77,7 @@ console.log(products[i].price,quantity1[i])
             {products.length === 0 ? (
                 <EmptyCart />
             ) : (
-                <div
+                <div  className={styles.MainDivOrder}
                     style={{
                         boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
                         width: "85%",
