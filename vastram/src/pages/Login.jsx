@@ -76,14 +76,6 @@ if(flag===false){
 
 }
 console.log(data)
-// const clicked=()=>{
-//   navigate("/admin")
-// }
-/////
-
-
-
-
 
 
 

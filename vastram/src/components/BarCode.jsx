@@ -1,5 +1,6 @@
 import React from "react";
 
+// Bar Code
 const BarCode = () => {
   return (
     <div style={{ paddingRight: "140px" }}>

@@ -10,7 +10,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import styles from "./Single.modules.css";
-// import StarPurple500Icon from "@mui/icons-material/StarPurple500";
+
 import { postCartRequest } from "../redux/CartReducer/Action";
 import { useDispatch } from "react-redux";
 import Swal from "sweetalert2";

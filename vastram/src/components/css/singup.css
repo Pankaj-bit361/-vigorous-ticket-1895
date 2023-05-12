@@ -1,3 +1,4 @@
+/* form */
 #form {
     width:32%;
     margin:auto;
@@ -25,17 +26,7 @@ form :nth-child(1){
    
 }
 
-/* #form button{
-   background-color:#0076be;
-   color:white;
-   width:75% ;
-   height: 47px;
-   font-size: 18px;
-   line-height: normal; 
-  
-  border:none;
-   border-radius: 3%;
-} */
+
 #form div{
     margin-top: 4%;
 }

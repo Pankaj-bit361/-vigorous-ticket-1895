@@ -8,7 +8,7 @@ export const Mens = () => {
 
   return (
     <div style={{width:"100%",margin:"auto"}}> 
-    {/* <div style={{gridColumnStart:1 ,gridColumnEnd:3,margin:"auto",margin:"5%",marginTop:"15%", }}><Sidebar setdiscount={setdiscount} /></div> */}
+  
     <div style={{}}>  <MensProducts discount={discount} /></div>
     
     </div>

@@ -12,6 +12,8 @@ import { getwomenproducts } from "../redux/productReducer/action"
 import "./css/menproduct.css"
 import Dictaphone from "./Dictaphone"
 
+// Women Products
+
 export const WomenProducts=({discount,setsearch,search})=>{
 const [sort,setsort]=useState("")
     const [ham,setham]=useState(false)
@@ -52,7 +54,7 @@ setsort(e.target.value)
 }
    
     
-console.log(searchparams.getAll("color"))
+// console.log(searchparams.getAll("color"))
 
     const data=useSelector((state)=>state.productReducer.products);
     
@@ -164,10 +166,6 @@ const handlethree=()=>{
 </Link>
     
     </div>
-    {/* <Box  mt={"2%"} >
-     <Button colorScheme="red" onClick={()=>setpage(page-1)} >Prev</Button>
-    <span >{page}</span>
-    <Button  colorScheme="orange" onClick={()=>setpage(page+1)}>Next</Button> 
- </Box>  */}
+
     </>
 }

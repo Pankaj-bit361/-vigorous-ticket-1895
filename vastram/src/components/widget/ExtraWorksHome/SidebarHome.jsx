@@ -1,6 +1,4 @@
 
-import "./Navbar.scss"
-import {NavLink} from 'react-router-dom'
 import {
   Box,
   Flex,
@@ -20,7 +18,8 @@ import {
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
-//Nav
+
+// Navbar side
 export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
 //   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -29,9 +28,7 @@ export default function Navbar() {
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <Box>
-          <NavLink to='/'>
             <img className="img" src="https://www.linkpicture.com/q/HD-Logo-1.png" alt='logo'/>
-          </NavLink>
           </Box>
           {/* <Box fontSize="2xl" fontWeight="bold" >DASHBOARD</Box> */}
 

@@ -1,6 +1,7 @@
 import { Box, Heading, Text, Button } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
+// Empty Cart
 const EmptyCart = () => {
     const navigate = useNavigate();
     const handleHome = () => {
@@ -24,7 +25,7 @@ const EmptyCart = () => {
             <Button
                 mt={4}
                 onClick={handleHome}
-                // colorScheme="teal"
+    
                 bgGradient="linear(to-r, rgba(23,39,74,1), rgba(146,175,238,1))"
                 transition="all .5s ease-in-out"
                 color="white"

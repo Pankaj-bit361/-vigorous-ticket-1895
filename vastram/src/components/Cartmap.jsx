@@ -1,9 +1,9 @@
+
+//Cart Map
 import { Button } from "@chakra-ui/react";
 import styles from "./Cartmap.module.css";
 
 export const  CartMap=({ images, price, title, id, HandleCartDelete,setquantity})=> {
-
-
 
     return (
         <>

@@ -25,7 +25,7 @@ export const deletesuccess=()=>{
 }
 
 
-
+// get
 export const getproducts=(ob)=>async(dispatch)=>{
 
     dispatch(productrequest)
@@ -37,6 +37,8 @@ export const getproducts=(ob)=>async(dispatch)=>{
         dispatch(productfailure)
     })
     }
+
+    // get
     export const getwomenproducts=(ob)=>async(dispatch)=>{
 
         dispatch(productrequest)
@@ -49,6 +51,7 @@ export const getproducts=(ob)=>async(dispatch)=>{
         })
         }
 
+        // get
         export const getkidsproducts=(ob)=>async(dispatch)=>{
 
             dispatch(productrequest)

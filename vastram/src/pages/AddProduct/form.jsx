@@ -33,13 +33,8 @@ const Form = () => {
     };
 
     dispatch(addProducts(obj)).then(()=>dispatch(getProduct))
-    // axios
-    //   .post(`https://determined-gold-jaguar.cyclic.app/${gender}`, obj)
-    //   .then((res) => {
-    //     console.log(res.data);
-    //   }).catch((err)=>{
-    //     console.log(err)
-    //   })
+  
+
     console.log(obj);
     setImage("");
     setTitle("");

@@ -13,6 +13,8 @@ import { RxExit } from "react-icons/rx";
 import { CgProfile } from "react-icons/cg";
 import { FaStore } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
+//Sidebar
 const Sidebar = () => {
   return (
     <div className="sidebar">

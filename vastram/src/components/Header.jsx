@@ -1,6 +1,7 @@
 import React from 'react'
 import {Box} from '@chakra-ui/react'
 
+// Header
 const Header = () => {
   return (
     <Box style={{ backgroundColor: "black", height: "30px" }}>

@@ -1,4 +1,4 @@
-// import { ReactNode } from 'react';
+
 import {
   Box,
   Button,
@@ -18,6 +18,8 @@ import AppStoreBadge from "../components/AppStoreBadge";
 import BarCode from "../components/BarCode";
 import PlayStoreBadge from "../components/PlayStoreBadge";
 
+
+// List Header
 const ListHeader = ({ children }) => {
   return (
     <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
@@ -26,6 +28,7 @@ const ListHeader = ({ children }) => {
   );
 };
 
+// Social Button
 const SocialButton = ({ children, label, href }) => {
   return (
     <chakra.button
@@ -71,7 +74,7 @@ export default function LargeWithAppLinksAndSocial() {
             <Link href={"#"}>Find a Registry</Link>
             <Link href={"#"}>FAQs</Link>
           </Stack>
-          {/* <Box style={{borderLeft:'1px solid gray', marginRight:'400px'}}></Box> */}
+
           <Stack align={"flex-start"}>
             <ListHeader>Vastram Rewards+ Credit Card</ListHeader>
             <Button

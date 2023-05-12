@@ -13,5 +13,5 @@ productsReducer,
 adminReducer
 })
 
-
+// store
 export const store=legacy_createStore(allreducers,applyMiddleware(thunk))

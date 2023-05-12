@@ -1,3 +1,4 @@
+/* Cart */
 .cart_main_div {
     border: 2.5px solid transparent;
     border-radius: 15px;
@@ -12,14 +13,20 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     transition: all 0.2s ease-in-out;
 }
+
+/* cart main  */
 .cart_main_div:hover {
     border: 2.5px solid #17274a;
 transform: scale(.99);
 }
+
+/* cart image */
+
 .cart_image_div {
     width: 25%;
-    /* height: 300px; */
 }
+
+/* product Info */
 
 .productInfo_div {
     width: 35%;
@@ -39,10 +46,13 @@ transform: scale(.99);
     height: 300px;
 }
 
+/* Order  */
 .Order_summmary_div {
     width: 25%;
     height: 300px;
 }
+
+/* subdiv */
 .subdiv_headings {
     font: normal normal bold 16px/21px "Visuelt Pro", sans-serif;
     letter-spacing: 0.8px;
@@ -52,6 +62,7 @@ transform: scale(.99);
     background: transparent;
     border-bottom: 1px solid #f7f7f7;
 }
+
 .productInfo_div p:nth-child(1) {
     font: normal normal bold 16px/21px "Visuelt Pro", sans-serif;
     letter-spacing: 0.8px;

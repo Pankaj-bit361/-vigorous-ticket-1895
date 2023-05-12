@@ -11,6 +11,7 @@ import { getkidsproducts } from "../redux/productReducer/action"
 
 import "./css/menproduct.css"
 
+
 export const Kidsproduct=({discount})=>{
 const [sort,setsort]=useState("")
     const [ham,setham]=useState(false)
@@ -21,8 +22,7 @@ const [sort,setsort]=useState("")
     const [visible, setVisible] = useState(false)
 
 
-
-  //<------->Scroll Button starts----------->
+    // toggle visible
     const toggleVisible = () => {
       const scrolled = document.documentElement.scrollTop;
       if (scrolled > 120){
@@ -41,9 +41,6 @@ const [sort,setsort]=useState("")
     };
     window.addEventListener('scroll', toggleVisible);
 
-//<------->Scroll Button Ends----------->
-
-//------>Sort ---------->
 
 const handlesort=(e)=>{
 console.log(e.target.value)

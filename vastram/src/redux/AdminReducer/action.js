@@ -7,6 +7,7 @@ import {
   PRODUCT_SUCCESS,
 } from "./actionType";
 
+// get
 export const getProduct = (dispatch) => {
   dispatch({ type: PRODUCT_REQUEST });
   axios
@@ -20,6 +21,7 @@ export const getProduct = (dispatch) => {
     });
 };
 
+// post
 export const addProducts = (data) => (dispatch) => {
   dispatch({ type: PRODUCT_REQUEST });
   return axios
@@ -32,6 +34,7 @@ export const addProducts = (data) => (dispatch) => {
     });
 };
 
+// post
 export const addProductsMen = (data) => (dispatch) => {
     dispatch({ type: PRODUCT_REQUEST });
     return axios
@@ -45,6 +48,7 @@ export const addProductsMen = (data) => (dispatch) => {
   };
 
 
+  //delete
 export const delProduct = (id) =>(dispatch)=>{
     dispatch({type: PRODUCT_REQUEST});
     return axios.delete(`https://determined-gold-jaguar.cyclic.app/women/${id}`).then(()=>{
@@ -58,6 +62,7 @@ export const delProduct = (id) =>(dispatch)=>{
 export const editProduct = (dataObj, id) => (dispatch) => {
     dispatch({type:PRODUCT_REQUEST})
     
+    //patch
      return axios.patch(`https://determined-gold-jaguar.cyclic.app/women/${id}`, dataObj).then(()=>{
         dispatch({type: EDIT_PRODUCT_SUCCESS})
      }).catch(()=>{

@@ -1,8 +1,6 @@
-import "./widget.scss";
 
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-
 
 // Widget
 const Widget = () => {
@@ -49,6 +47,7 @@ const Widget = () => {
         <span className="title">All Products</span>
         <span className="counter">{men.length + women.length}</span>
       </div>
+
     </div>
   )
 }

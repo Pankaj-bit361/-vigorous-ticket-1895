@@ -7,13 +7,10 @@ import { useLocation, useSearchParams } from "react-router-dom"
 import {FaArrowCircleUp} from 'react-icons/fa';
 import bot from "../images/chatbot.png";
 import {Link} from "react-router-dom"
-import { getproducts } from "../redux/productReducer/action"
-import {Dictaphone} from "./Dictaphone"
-import "./css/menproduct.css"
+import { getkidsproducts } from "../redux/productReducer/action"
 
-export const MensProducts=({discount})=>{
-
-
+// Kids Product
+export const Kidsproduct=({discount})=>{
 const [sort,setsort]=useState("")
     const [ham,setham]=useState(false)
     const [three,setthree]=useState(true)
@@ -22,7 +19,7 @@ const [sort,setsort]=useState("")
     const location=useLocation()
     const [visible, setVisible] = useState(false)
 
-    // toggle visible
+// toggle visible
     const toggleVisible = () => {
       const scrolled = document.documentElement.scrollTop;
       if (scrolled > 120){
@@ -33,6 +30,7 @@ const [sort,setsort]=useState("")
       }
     };
     
+    // scroll top
     const scrollToTop = () =>{
       window.scrollTo({
         top: 0, 
@@ -48,7 +46,7 @@ setsort(e.target.value)
 }
    
     
-console.log(searchparams.getAll("color"))
+// console.log(searchparams.getAll("color"))
 
     const data=useSelector((state)=>state.productReducer.products);
     
@@ -59,18 +57,17 @@ useEffect(()=>{
         params:{
           brand:searchparams.getAll("brand"),
           color:searchparams.getAll("color"),
-      
-       
-       _sort:"off_price",
+        _limit:18,
+       _page:page,
+       _sort:"price",
        _order:sort
         }
       }
 
 
-// console.log(data)
-
-dispatch(getproducts(ob))
-},[location.search,sort])
+console.log(data)
+dispatch(getkidsproducts(ob))
+},[location.search,page,sort])
 
 
 const handleham=()=>{
@@ -86,10 +83,10 @@ const handlethree=()=>{
 
     return  <>
     <div>
-<Dictaphone/>
+
     <div style={{fontFamily:""}}>
     <Flex justifyContent={"space-between"}>
-  <Text marginTop={"0.8%"}>Men's Clothing</Text>
+  <Text marginTop={"0.8%"}>Kids's Clothing</Text>
   <Flex gap={"5%"}>
   <Text mt={"4%"}>Sort</Text>
     <Select value={sort} onChange={handlesort} >
@@ -107,24 +104,23 @@ const handlethree=()=>{
     </Flex>
   
   </Flex>
-{three?<SimpleGrid mt={"5%"} columns={[1,2,3]} h={"400px"} spacing={"2%"}>
+{three?<div style={{display:"grid" ,gridTemplateColumns:"repeat(3,1fr)",gap:"1%",marginTop:"2%", marginBottom:"12%"}}>
 {data?.map((item)=>(
     <Box key={item.id} fontSize={"80%"}  boxShadow="rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;">
-    <Image  w={"100%"} src={item.images.image1}></Image>
-    <Text mt={"2%"} textAlign={"center"}>{item.id}--{item.title}</Text>
+    <Image  w={"100%"} src={item.image}></Image>
+    <Text mt={"2%"} textAlign={"center"}>{item.title}</Text>
     <Text  mt={"2%"} >{item.brand}</Text>
-    <Text  mt={"2%"} >${discount?Math.floor(item.off_price-item.off_price/10):item.off_price} <span style={{color:"red"}}>After Coupon</span></Text>
-    <del  >${item.price}</del>
+   
+    <Text  >${item.price}</Text>
     <Text  mt={"2%"} > {+item.rating<=5 && +item.rating>=4?`${item.rating} ★★★★✪`:+item.rating<=4 && +item.rating>=3?`${item.rating} ★★★✪✫`:+item.rating<=3 && +item.rating>=2?`${item.rating} ★★✪✫✫`:+item.rating<=2 && +item.rating>=1?`${item.rating} ★✪✫✫✫`:`${item.rating} ✪✫✫✫✫`}</Text>
-   <Link to={`/mens/${item.id}`}> <Button mb={"2%"} colorScheme={"orange"}>View Details</Button></Link>
+   <Link to={`/kids/${item.id}`}> <Button mb={"2%"} colorScheme={"orange"}>View Details</Button></Link>
     </Box>
 ))}
-</SimpleGrid>:<SimpleGrid mt={"2%"} fontFamily=" FONT-FAMILY
-    Roboto, Arial, sans-serif"  columns={1} h={"250px"} spacing={"2%"}>
+</div>:<div >
 {data?.map((item)=>(
-    <Box fontSize={""} height={"250px"}   boxShadow="rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;">
+    <Box mt={"2%"} fontSize={""} height={"250px"}   boxShadow="rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;">
     <Flex  h={"250px"} justifyContent={"space-around"} >
-    <Box> <Image  height={"250px"}  src={item.images.image1}></Image></Box>
+    <Box> <Image  height={"250px"} width={"250px"} src={item.image}></Image></Box>
    <Box w={"30%"} m={"auto"}>
     <Text w={"100%"} mt={"2%"} textAlign={"center"}>{item.title}</Text>
     <Text  mt={"2%"} >{item.brand}</Text>
@@ -142,7 +138,7 @@ const handlethree=()=>{
     </Flex>
     </Box>
 ))}
-</SimpleGrid>}
+</div>}
 
 
     </div>
@@ -159,6 +155,6 @@ const handlethree=()=>{
 </Link>
     
     </div>
-
+    
     </>
 }

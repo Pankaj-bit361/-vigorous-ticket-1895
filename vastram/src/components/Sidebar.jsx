@@ -47,7 +47,7 @@ setsearchparams(params)
 
 
 
-  console.log(brand)
+  // console.log(brand)
 
   return (
     <Box>
@@ -134,14 +134,7 @@ setsearchparams(params)
    <MenuList ml={"5%"} textAlign={"center"} w={"100%"}>
     
     <><Checkbox onChange={handlechecked} m={"5%"} mt={"2%"} type="checkbox"/>10% Discount for New User </>
-    {/* <br/>
-    <><Checkbox  m={"5%"} mt={"2%"} type="checkbox"/> H&M </>
-    <br/>
-    <><Checkbox  m={"5%"} mt={"2%"} type="checkbox"/>Roadster </>
-    <br/>
-    <><Checkbox  m={"5%"} mt={"2%"} type="checkbox"/>Celfie Design </> */}
 
-   
   </MenuList> 
 </Menu>
 <hr/>
@@ -149,18 +142,7 @@ setsearchparams(params)
   <MenuButton bg={"white"} textAlign={"left"} w={"90%"} as={Button} rightIcon={<ChevronDownIcon />}>
     Sold By
   </MenuButton>
-  {/* <MenuList ml={"5%"} textAlign={"left"} w={"100%"}>
-    
-    <><Checkbox m={"5%"} mt={"2%"} type="checkbox"/>HRX</>
-    <br/>
-    <><Checkbox  m={"5%"} mt={"2%"} type="checkbox"/> H&M </>
-    <br/>
-    <><Checkbox  m={"5%"} mt={"2%"} type="checkbox"/>Roadster </>
-    <br/>
-    <><Checkbox  m={"5%"} mt={"2%"} type="checkbox"/>Celfie Design </>
-
-   
-  </MenuList> */}
+  
 </Menu>
 </Box>
     </Box>

@@ -1,5 +1,6 @@
 import React from "react";
 
+//Play Store Badge
 const PlayStoreBadge = () => {
   return (
     <div>

@@ -1,5 +1,6 @@
 import React from "react";
 
+//App Store Badge
 const AppStoreBadge = () => {
   return (
     <div>

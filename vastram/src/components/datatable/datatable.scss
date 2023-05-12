@@ -1,3 +1,4 @@
+//data table
 .datatable {
   height: 600px;
   padding: 20px;
@@ -11,6 +12,7 @@
     align-items: center;
     justify-content: space-between;
 
+    //link
     .link{
       text-decoration: none;
       color: green;
@@ -54,6 +56,7 @@
     }
   }
 
+  //cell action
   .cellAction {
     display: flex;
     align-items: center;
@@ -66,7 +69,7 @@
       border: 1px dotted rgba(0, 0, 139, 0.596);
       cursor: pointer;
     }
-    
+     //del button
     .deleteButton {
       padding: 2px 5px;
       border-radius: 5px;

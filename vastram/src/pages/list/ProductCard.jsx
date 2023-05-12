@@ -26,17 +26,11 @@ const ProductCard = ({
   const dispatch = useDispatch();
   const handleDel = () => {
     dispatch(delProduct(id)).then(() => dispatch(getProduct));
-    //  axios.delete(`https://determined-gold-jaguar.cyclic.app/women/${id}`)
-    //   .then(() => {
-    //     //   displayMen()
-    //     console.log(id);
-    //   });
+
   };
 
   console.log(id);
-  // const handleEdit = () => {
-  //   alert("clicked")
-  // };
+
   return (
     <>
       <Tr key={id}>

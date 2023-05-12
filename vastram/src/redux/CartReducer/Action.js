@@ -21,6 +21,7 @@ export const DeleteCartSuccess = () => {
     return { type: DELETE_CART_SUCCESS};
 };
 
+// get
 export const getCartProducts = () => (dispatch) => {
     dispatch(getCartProductsRequestAction());
    return axios
@@ -33,6 +34,7 @@ export const getCartProducts = () => (dispatch) => {
      });
 };
 
+// post
 export const postCartRequest = (payload) => (dispatch) => {
     dispatch(getCartProductsRequestAction());
     axios
@@ -45,7 +47,7 @@ export const postCartRequest = (payload) => (dispatch) => {
       });
 };
 
-
+// delete
 export const deleteCartdata = (id) => (dispatch) => {
     dispatch(getCartProductsRequestAction());
     return axios

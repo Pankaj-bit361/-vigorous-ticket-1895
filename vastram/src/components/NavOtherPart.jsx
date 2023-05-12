@@ -6,7 +6,7 @@ import { BiDollar } from "react-icons/bi";
 import { BsBagCheck, BsCardChecklist } from "react-icons/bs";
 import { VscAccount } from "react-icons/vsc";
 import logo from "../images/img1.png";
-// import "../style.scss";
+
 
 const NavOtherPart = ({setsearch,search}) => {
 
@@ -34,7 +34,7 @@ console.log(windowDimension.winWidth)
   return (
     <div
     style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)"}}
-      // className="nav-main-logo"
+
     
     >
    {windowDimension.winWidth>767?
@@ -47,7 +47,7 @@ console.log(windowDimension.winWidth)
      style={{width:"100%"}}
         src={logo}
         alt=""
-        // className="nav-logo"
+      
        
       /></Link>
       </Box>:""} 
@@ -57,7 +57,7 @@ console.log(windowDimension.winWidth)
       w={"100%"}
       h={"8vh"}
         placeholder="What can we help you find?"
-        // className="nav-input"
+      
         _placeholder={{fontSize:"90%"}}
        onChange={(e)=>setsearch(e.target.value)}
        value={search}
@@ -68,15 +68,15 @@ console.log(windowDimension.winWidth)
 
 {windowDimension.winWidth>767?<Box  style={{ marginLeft: "7%",gridColumnStart:"4",gridColumnEnd:"5" }}>
       <Box
-      // className='main-icon'
+     
       >
         <Flex>
           <Box
            
-            // className='icons-box-reward'
+  
           >
             <BsCardChecklist
-              //  className='icon-reward'
+     
               style={{
                 height: "6.2vh",
                 width: "40%",

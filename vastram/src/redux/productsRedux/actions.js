@@ -1,8 +1,7 @@
 import axios from "axios";
 import * as types from "./actionTypes";
 
-
-
+// post
 export const addShipping = (data) => (dispatch) => {
   dispatch({ type: types.PRODUCT_REQUEST });
   axios
@@ -16,7 +15,7 @@ export const addShipping = (data) => (dispatch) => {
     });
 };
 
-
+//get
 export const getShipping = () => (dispatch) => {
   dispatch({ type: types.PRODUCT_REQUEST });
   axios
@@ -30,6 +29,7 @@ export const getShipping = () => (dispatch) => {
     });
 };
 
+// post
 export const addPayment = (data) => (dispatch) => {
   dispatch({ type: types.PRODUCT_REQUEST });
   axios
@@ -44,7 +44,7 @@ export const addPayment = (data) => (dispatch) => {
     });
 };
 
-
+// get
 export const getPayment = () => (dispatch) => {
   dispatch({ type: types.PRODUCT_REQUEST });
   axios

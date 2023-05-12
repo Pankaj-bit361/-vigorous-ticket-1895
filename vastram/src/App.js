@@ -10,13 +10,9 @@ import LargeWithAppLinksAndSocial from './components/Footer';
 function App() {
   return (
     <div className="App">
-      {/* <WithSubnavigation/> */}
+ 
    <MainRoutes/>
-{/* <SingleProductPages/> */}
-     {/* <Signup/> */}
 
-     {/* <Login/> */}
-     {/* <Mens/> */}
     
     </div>
   );

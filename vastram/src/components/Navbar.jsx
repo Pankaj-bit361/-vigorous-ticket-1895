@@ -29,6 +29,7 @@ import {useState,useEffect} from "react"
 import Header from './Header';
 import NavOtherPart from './NavOtherPart';
 
+// WithSubnavigation
 export default function WithSubnavigation({setsearch, search}) {
   const { isOpen, onToggle } = useDisclosure();
   // const { colorMode, toggleColorMode } = useColorMode();
@@ -73,15 +74,10 @@ export default function WithSubnavigation({setsearch, search}) {
           <NavOtherPart search={search} setsearch={setsearch}/>
           </Text>
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
-            {/* <DesktopNav /> */}
-            {/* DesktopNav is used for dropdown multiple upper side */}
-
-            {/* For Icons */}
+          
           </Flex>
         </Flex>
-        {/* <Button onClick={toggleColorMode}> */}
-        {/* {colorMode === "light" ? <MoonIcon /> : <SunIcon />} */}
-        {/* </Button> */}
+ 
       </Flex>
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
@@ -94,6 +90,7 @@ export default function WithSubnavigation({setsearch, search}) {
   );
 }
 
+// Desk top nav
 const DesktopNav = () => {
 
   const [windowDimension,detectHW]=useState({
@@ -113,7 +110,7 @@ useEffect(()=>{
   }
 },[windowDimension])
 
-console.log(windowDimension.winWidth)
+// console.log(windowDimension.winWidth)
 
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
@@ -156,22 +153,6 @@ console.log(windowDimension.winWidth)
                 </Stack>
               </PopoverContent>
             )}
-            {/* {navItem.children1 && (
-              <PopoverContent
-                border={0}
-                boxShadow={"xl"}
-                bg={popoverContentBgColor}
-                p={4}
-                rounded={"xl"}
-                minW={"sm"}
-              >
-                <Stack>
-                  {navItem.children1.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
-                  ))}
-                </Stack>
-              </PopoverContent>
-            )} */}
           </Popover>
         </Box>
       )):""}
@@ -179,6 +160,7 @@ console.log(windowDimension.winWidth)
   );
 };
 
+// Desk top SubNav
 const DesktopSubNav = ({ label, href, subLabel }) => {
   return (
     <Link
@@ -216,6 +198,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
   );
 };
 
+// Mobile Nav
 const MobileNav = () => {
 
   const [windowDimension,detectHW]=useState({
@@ -251,6 +234,7 @@ const MobileNav = () => {
   );
 };
 
+// Mobile Nav Item
 const MobileNavItem = ({ label, children, href }) => {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -347,24 +331,7 @@ const NAV_ITEMS = [
       },
 
     ],
-  //   children1: [
-  //     {
-  // label: "Beuty Gifts",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Cozy Shop",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Designer Handbags",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Eco Friendly",
-  //       href: "#",
-  //     },
-  //   ]
+ 
     
   },
   {
@@ -700,224 +667,5 @@ const NAV_ITEMS = [
       },
     ],
   },
-  // {
-  //   label: "Beauty",
-  //   children: [
-  //     {
-  //       label: "Shop All Beauty",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Skin Care",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Makeup",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Bath & Body",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Hair Care & Tools",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Nail Polish & Tool",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Beauty",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Clean Beauty",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Beauty Brands",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Masks & Hand Sanitizers",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //   ],
-  // },
-  // {
-  //   label: "Home",
-  //   children: [
-  //     {
-  //       label: "Shop All Home",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Kitchen",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Tabletop & Bar",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Home Decor",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Furniture",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Toys & Games",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Food & Gourmet Gifts",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Holiday",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Bed & Bath",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Camping & Outdoor",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //   ],
-  // },
-  // {
-  //   label: "Brands",
-  //   children: [
-  //     {
-  //       label: "Shop All Brads",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Holiday",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "New Arrival",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Brands",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Women's Brands",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Kids Brands",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Men's Brands",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Beauty Brands",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Active Brands",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Juniors Clothing Brands",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //   ],
-  // },
-  // {
-  //   label: "Clearance",
-  //   children: [
-  //     {
-  //       label: "Women's Clearance",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Men's Clearance",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Jewelry Clearance",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Kids Clearance",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Shoes Clearance",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Handbags Clearance",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Gift Clearance",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Women's Dresses Clearance",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Beauty Clearance",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Juniors Clothing Clearance",
-  //       subLabel: "",
-  //       href: "#",
-  //     },
-  //   ],
-  // },
+
 ];

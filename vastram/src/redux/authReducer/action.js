@@ -16,7 +16,7 @@ export const getloginsucces=(payload)=>{
     return {type:GET_LOGIN_SUCCESS,payload}
 }
 
-
+//post
 export const logintry=(ob)=>async(dispatch)=>{
     dispatch(loginrequest)
     return axios.post(`https://63f87b1f5b0e4a127de6dd05.mockapi.io/survey/users`,ob)

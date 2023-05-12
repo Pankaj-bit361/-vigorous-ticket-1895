@@ -1,11 +1,8 @@
 import React from 'react';
 import SpeechRecognition, {useSpeechRecognition}   from 'react-speech-recognition';
 
-
-
 export const Dictaphone = ({setinput,set,setsearch}) => {
     
-
 const commands=[
     {
     command:"clear",
@@ -20,13 +17,7 @@ const commands=[
         window.open("http://"+site);
     }
 }
-// ,{
-//    command:'search *',
-//    callback:(site)=>{
-// console.log(site)
-// set(`${site}`)
-//    }
-// }
+
 ,
 
 {
