@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/navbar/Navbar";
 import { useDispatch, useSelector } from "react-redux";
 import { editProduct, getProduct } from "../redux/AdminReducer/action";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./edit.scss"
 
 
 const EditPage = () => {
     const [data,setData] =useState("");
     const {id} = useParams()
+    const navigate = useNavigate()
     const dispatch = useDispatch();
     const product = useSelector((store)=>store.adminReducer.products)
     console.log(product)
@@ -23,6 +24,8 @@ const EditPage = () => {
     const handleEdit =(e)=>{
         e.preventDefault()
         dispatch(editProduct(data, id)).then(() => dispatch(getProduct))
+        alert("edited")
+        navigate("/products")
     }
 
     useEffect(()=>{

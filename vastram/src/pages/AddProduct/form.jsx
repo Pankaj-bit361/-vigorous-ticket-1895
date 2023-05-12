@@ -15,7 +15,7 @@ const Form = () => {
   const [size, setSize] = useState("");
   const [count, setCount] = useState("");
   const [brand, setBrand] = useState("");
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("OK");
@@ -32,9 +32,8 @@ const Form = () => {
       count: +count,
     };
 
-    dispatch(addProducts(obj)).then(()=>dispatch(getProduct))
-  
-
+    dispatch(addProducts(obj)).then(() => dispatch(getProduct));
+    alert("Product Added")
     console.log(obj);
     setImage("");
     setTitle("");
@@ -46,7 +45,7 @@ const Form = () => {
     setColor("");
     setSize("");
     setCount("");
-    setBrand("")
+    setBrand("");
   };
   return (
     <div className="top">
