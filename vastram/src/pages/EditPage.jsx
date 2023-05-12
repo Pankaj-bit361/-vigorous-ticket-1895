@@ -8,9 +8,10 @@ import "./edit.scss"
 
 const EditPage = () => {
     const [data,setData] =useState("");
-    const {id} = useParams()
+    const {id} = useParams();
     const navigate = useNavigate()
     const dispatch = useDispatch();
+    
     const product = useSelector((store)=>store.adminReducer.products)
     console.log(product)
     const handleChange=(e)=>{
