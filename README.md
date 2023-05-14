@@ -1,6 +1,5 @@
 
-FrontEnd-->netlify-link->https://unrivaled-shortbread-bcc2c0.netlify.app/
-
+FrontEnd-->netlify-link->https://shimmering-tartufo-c305ba.netlify.app/
 
 Backened-->cylic-link->https://determined-gold-jaguar.cyclic.app/
 
