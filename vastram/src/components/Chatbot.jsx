@@ -11,7 +11,7 @@ const init = {
 };
 
 //Chat bot
-console.log(process.env.openai)
+console.log(process.env.REACT_APP_SECRET_CODE)
 
 export const Chatbot = () => {
   const inputRef = useRef(null);
