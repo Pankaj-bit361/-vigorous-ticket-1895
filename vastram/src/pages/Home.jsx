@@ -36,6 +36,8 @@ const imagesLast = [
 ]
 
 export const Home = () => {
+console.log(process.env.port)
+
   return (
     <>
 <WithSubnavigation/>
