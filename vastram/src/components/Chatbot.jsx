@@ -34,7 +34,7 @@ export const Chatbot = () => {
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.openai}`,
+            Authorization: `Bearer ${process.env.REACT_APP_SECRET_CODE}`,
           },
         }
       );
