@@ -77,7 +77,7 @@ console.log(id,"27 line")
 
    
 console.log(data)
-    const {images,image,title,price,rating}= data
+    const {images,image,title,price,off_price,rating}= data
 
 
 
@@ -112,7 +112,7 @@ console.log(data)
                         </Heading>
                         <br />
                         <Heading as="h4" size="md">
-                            Price : {price &&price} $/-
+                            Price : {off_price &&off_price} $/-
                         </Heading>
                         <br />
                         <Button
