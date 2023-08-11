@@ -67,7 +67,7 @@ export const Kidsproduct = ({ discount }) => {
         color: searchparams.getAll("color"),
         _limit: 18,
         _page: page,
-        _sort: "price",
+        _sort: "off_price",
         _order: sort,
       },
     };
