@@ -187,9 +187,9 @@ export const Kidsproduct = ({ discount }) => {
                         {discount
                           ? Math.floor(item.off_price - item.off_price / 10)
                           : item.off_price}{" "}
-                        <span style={{ color: "red" }}>After Coupon</span>
+                        <span >price</span>
                       </Text>
-                      <del>${item.price}</del>
+                      {/* <del>${item.price}</del> */}
                     </Box>
                     <Box m={"auto"}>
                       <Text>
