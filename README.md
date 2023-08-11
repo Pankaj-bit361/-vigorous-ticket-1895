@@ -1,5 +1,5 @@
 
-FrontEnd-->netlify-link->https://shimmering-tartufo-c305ba.netlify.app/
+FrontEnd-->vercel-link->(https://belk-xi.vercel.app/)
 
 Backened-->cylic-link->https://determined-gold-jaguar.cyclic.app/
 
