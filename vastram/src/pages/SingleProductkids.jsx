@@ -24,7 +24,7 @@ export const SingleProductkids = () => {
     const navigate = useNavigate();
     const {id} = useParams();
    
-console.log(id)
+console.log(id,"27 line")
     const toast = useToast();
 
     const [isButLoading, setIsButLoading] = useState(false);
@@ -61,25 +61,29 @@ console.log(id)
         navigate("/cart");
     }
     const handleDelivery = () => {};
-
+    const [img,setImg]=useState("")
  
-       
-   useEffect(()=>{
-    axios.get(`https://determined-gold-jaguar.cyclic.app/kids/${id}`)
-    .then((res)=>{
-        setData(res.data)
-        console.log(data)
-    })
-
-   },[])
+    useEffect(()=>{
+        console.log(data,"line 67")
+        axios.get(`https://determined-gold-jaguar.cyclic.app/kids/${id}`)
+        .then((res)=>{
+            setData(res.data)
+            console.log(data,"line 71")
+            setImg(res.data.images.image1)
+        })
     
+       },[])
+        
+
    
 console.log(data)
-    const {images,image,title,price,rating}= data
-
-    const [img,setImg]=useState("")
+    const {images,image,title,price,off_price,rating}= data
 
 
+
+
+
+    
        return ( 
        <>
         <WithSubnavigation/>
@@ -108,7 +112,7 @@ console.log(data)
                         </Heading>
                         <br />
                         <Heading as="h4" size="md">
-                            Price : {price &&price} $/-
+                            Price : {off_price &&off_price} $/-
                         </Heading>
                         <br />
                         <Button

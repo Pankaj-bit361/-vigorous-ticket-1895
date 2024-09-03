@@ -39,7 +39,7 @@ setinput(`${site}`)
 {
   command:"go to *",
   callback:(site)=>{
-    window.open(`http://localhost:3000/${site}`)
+    window.open(`https://belk-xi.vercel.app/${site}`)
   }
 }
 ,

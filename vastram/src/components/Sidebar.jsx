@@ -129,7 +129,7 @@ setsearchparams(params)
 <hr/>
      <Menu w={"100%"}>
   <MenuButton bg={"white"} textAlign={"left"} w={"90%"} as={Button} rightIcon={<ChevronDownIcon />}>
-    Coupon Eligible
+    Coupon
   </MenuButton>
    <MenuList ml={"5%"} textAlign={"center"} w={"100%"}>
     

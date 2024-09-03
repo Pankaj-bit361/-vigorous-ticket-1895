@@ -21,7 +21,7 @@ export const getShipping = () => (dispatch) => {
   axios
     .get("https://determined-gold-jaguar.cyclic.app/shipping" )
     .then((res) => {
-      console.log(res);
+      console.log(res,"productredux");
       dispatch({ type: types.GET_SHIPPING_SUCCESS, payload: res.data });
     })
     .catch(() => {
