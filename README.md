@@ -1,7 +1,7 @@
 
 FrontEnd-->vercel-link->https://belk-xi.vercel.app/
 
-Backened-->cylic-link->https://determined-gold-jaguar.cyclic.app/
+Backened-->backend-aws-link->http://vastram.pankajvashisht.xyz/
 
 # Vastram
 
