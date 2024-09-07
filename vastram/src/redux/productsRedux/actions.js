@@ -5,7 +5,7 @@ import * as types from "./actionTypes";
 export const addShipping = (data) => (dispatch) => {
   dispatch({ type: types.PRODUCT_REQUEST });
   axios
-    .post("https://determined-gold-jaguar.cyclic.app/shipping", data)
+    .post("http://vastram.pankajvashisht.xyz/shipping", data)
     .then(() => {
       // console.log(res);
       dispatch({ type: types.ADD_SHIPPING_SUCCESS });
@@ -19,7 +19,7 @@ export const addShipping = (data) => (dispatch) => {
 export const getShipping = () => (dispatch) => {
   dispatch({ type: types.PRODUCT_REQUEST });
   axios
-    .get("https://determined-gold-jaguar.cyclic.app/shipping" )
+    .get("http://vastram.pankajvashisht.xyz/shipping" )
     .then((res) => {
       console.log(res,"productredux");
       dispatch({ type: types.GET_SHIPPING_SUCCESS, payload: res.data });
@@ -33,7 +33,7 @@ export const getShipping = () => (dispatch) => {
 export const addPayment = (data) => (dispatch) => {
   dispatch({ type: types.PRODUCT_REQUEST });
   axios
-    .post("https://determined-gold-jaguar.cyclic.app/cart2", data)
+    .post("http://vastram.pankajvashisht.xyz/cart2", data)
     .then(() => {
       // console.log(res);
       dispatch({ type: types.ADD_CART2_SUCCESS });
@@ -48,7 +48,7 @@ export const addPayment = (data) => (dispatch) => {
 export const getPayment = () => (dispatch) => {
   dispatch({ type: types.PRODUCT_REQUEST });
   axios
-    .get("https://determined-gold-jaguar.cyclic.app/cart2" )
+    .get("http://vastram.pankajvashisht.xyz/cart2" )
     .then((res) => {
       console.log(res);
       dispatch({ type: types.GET_CART2_SUCCESS, payload: res.data });

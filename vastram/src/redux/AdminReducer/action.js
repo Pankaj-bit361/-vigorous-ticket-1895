@@ -11,7 +11,7 @@ import {
 export const getProduct = (dispatch) => {
   dispatch({ type: PRODUCT_REQUEST });
   axios
-    .get(`https://determined-gold-jaguar.cyclic.app/women`)
+    .get(`http://vastram.pankajvashisht.xyz/women`)
     .then((res) => {
       console.log(res);
       dispatch({ type: PRODUCT_SUCCESS, payload: res.data });
@@ -25,7 +25,7 @@ export const getProduct = (dispatch) => {
 export const addProducts = (data) => (dispatch) => {
   dispatch({ type: PRODUCT_REQUEST });
   return axios
-    .post("https://determined-gold-jaguar.cyclic.app/women", data)
+    .post("http://vastram.pankajvashisht.xyz/women", data)
     .then(() => {
       dispatch({ type: PRODUCT_SUCCESS });
     })
@@ -38,7 +38,7 @@ export const addProducts = (data) => (dispatch) => {
 export const addProductsMen = (data) => (dispatch) => {
     dispatch({ type: PRODUCT_REQUEST });
     return axios
-      .post("https://determined-gold-jaguar.cyclic.app/men", data)
+      .post("http://vastram.pankajvashisht.xyz/men", data)
       .then(() => {
         dispatch({ type: PRODUCT_SUCCESS });
       })
@@ -51,7 +51,7 @@ export const addProductsMen = (data) => (dispatch) => {
   //delete
 export const delProduct = (id) =>(dispatch)=>{
     dispatch({type: PRODUCT_REQUEST});
-    return axios.delete(`https://determined-gold-jaguar.cyclic.app/women/${id}`).then(()=>{
+    return axios.delete(`http://vastram.pankajvashisht.xyz/women/${id}`).then(()=>{
         dispatch({type: DEL_PRODUCT_SUCCESS});
     }).catch(()=>{
         dispatch({type : PRODUCT_FAILURE});
@@ -63,7 +63,7 @@ export const editProduct = (dataObj, id) => (dispatch) => {
     dispatch({type:PRODUCT_REQUEST})
     
     //patch
-     return axios.patch(`https://determined-gold-jaguar.cyclic.app/women/${id}`, dataObj).then(()=>{
+     return axios.patch(`http://vastram.pankajvashisht.xyz/women/${id}`, dataObj).then(()=>{
         dispatch({type: EDIT_PRODUCT_SUCCESS})
      }).catch(()=>{
         dispatch({type: PRODUCT_FAILURE})

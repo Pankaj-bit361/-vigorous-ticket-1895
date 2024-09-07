@@ -11,12 +11,12 @@ const Widget = () => {
   const [user,setUser] =useState([]);
 
   const displayMen =()=>{
-    axios.get('https://determined-gold-jaguar.cyclic.app/men').then((res)=>{
+    axios.get('http://vastram.pankajvashisht.xyz/men').then((res)=>{
       setMen(res.data);
     })
   }
   const displayWomen =()=>{
-    axios.get('https://determined-gold-jaguar.cyclic.app/women ').then((res)=>{
+    axios.get('http://vastram.pankajvashisht.xyz/women ').then((res)=>{
       setWomen(res.data);
     })
   }

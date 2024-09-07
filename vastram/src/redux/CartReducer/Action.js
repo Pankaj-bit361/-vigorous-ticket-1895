@@ -26,7 +26,7 @@ export const updateCartSuccess = (payload) => {
 export const getCartProducts = () => (dispatch) => {
     dispatch(getCartProductsRequestAction());
    return axios
-     .get("https://determined-gold-jaguar.cyclic.app/cart")
+     .get("http://vastram.pankajvashisht.xyz/cart")
      .then((res) => {
       console.log(res.data,"cartReducer")
        dispatch(getCartProductsSuccessAction(res.data));
@@ -39,7 +39,7 @@ export const getCartProducts = () => (dispatch) => {
 export const postCartRequest = (payload) => (dispatch) => {
     dispatch(getCartProductsRequestAction());
     axios
-      .post("https://determined-gold-jaguar.cyclic.app/cart", payload)
+      .post("http://vastram.pankajvashisht.xyz/cart", payload)
       .then((res) => {
         dispatch(PostCartSuccess(res.data));
       })
@@ -52,7 +52,7 @@ export const postCartRequest = (payload) => (dispatch) => {
 export const deleteCartdata = (id) => (dispatch) => {
     dispatch(getCartProductsRequestAction());
     return axios
-      .delete(`https://determined-gold-jaguar.cyclic.app/cart/${id}`)
+      .delete(`http://vastram.pankajvashisht.xyz/cart/${id}`)
       .then((res) => {
         dispatch(DeleteCartSuccess());
       })
@@ -69,7 +69,7 @@ export const deleteCartdata = (id) => (dispatch) => {
       console.log("hello",id,payload)
         dispatch(getCartProductsRequestAction());
         return axios
-          .patch(`https://determined-gold-jaguar.cyclic.app/cart/${id}`,payload)
+          .patch(`http://vastram.pankajvashisht.xyz/cart/${id}`,payload)
           .then((res) => {
             console.log(res.data.data,"line71 please check")
             dispatch(updateCartSuccess(res.data));

@@ -65,7 +65,7 @@ console.log(id)
     const [img,setImg]=useState("")
        
    useEffect(()=>{
-    axios.get(`https://determined-gold-jaguar.cyclic.app/men/${id}`)
+    axios.get(`http://vastram.pankajvashisht.xyz/men/${id}`)
     .then((res)=>{
         setData(res.data)
         console.log(data)

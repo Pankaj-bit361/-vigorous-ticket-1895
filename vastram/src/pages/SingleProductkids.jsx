@@ -65,7 +65,7 @@ console.log(id,"27 line")
  
     useEffect(()=>{
         console.log(data,"line 67")
-        axios.get(`https://determined-gold-jaguar.cyclic.app/kids/${id}`)
+        axios.get(`http://vastram.pankajvashisht.xyz/kids/${id}`)
         .then((res)=>{
             setData(res.data)
             console.log(data,"line 71")
