@@ -69,3 +69,5 @@ export const editProduct = (dataObj, id) => (dispatch) => {
         dispatch({type: PRODUCT_FAILURE})
      })
   }
+
+  
