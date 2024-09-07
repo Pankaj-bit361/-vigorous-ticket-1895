@@ -41,11 +41,17 @@ const Checkout = () => {
         };
     });
   
+console.log(products,"line 44")
+
     useEffect(() => {
         dispatch(getCartProducts());
     }, []);
 
-   let totalprice=0;
+    let totalprice = 0;
+    for (var i = 0; i < products?.length; i++) {
+        totalprice += products[i]?.quantity * products[i]?.off_price;
+    }
+    console.log(totalprice, "totalprice");
 
 
     const handleChange = (e) => {
@@ -266,7 +272,7 @@ const Checkout = () => {
                                 <Box>
                                     <Flex alignItems={'center'} justifyContent={'space-between'} width={'100%'}>
                                         <Text fontWeight={'400'}>SubTotal </Text>
-                                        <Text fontWeight={'400'}  >$ 4603</Text>
+                                        <Text fontWeight={'400'}  >${totalprice}</Text>
                                     </Flex>
                                     <Flex alignItems={'center'} justifyContent={'space-between'} width={'100%'}>
                                         <Text fontWeight={'400'}>Est. Shipping (vastram)</Text>
@@ -276,10 +282,10 @@ const Checkout = () => {
                                 <Box>
                                     <Flex alignItems={'center'} justifyContent={'space-between'} width={'100%'}>
                                         <Text fontWeight={'bold'}>Estimated Total</Text>
-                                        <Text fontWeight={'bold'}  >$ 4603</Text>
+                                        <Text fontWeight={'bold'}  >${totalprice}</Text>
                                     </Flex>
                                     <Text>
-                                        or 4 interest-free payments of $657.57 with
+                                        or 4 interest-free payments of ${Math.floor(totalprice/4)} with
                                     </Text>
                                     <Image src={afterpay} alt='afterpay' width={'30%'} height={'60%'} />
 

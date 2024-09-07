@@ -7,6 +7,7 @@ import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import {
     deleteCartdata,
     getCartProducts,
+    updateCartdata,
 } from "../redux/CartReducer/Action";
 
 import { Spinner, useToast } from "@chakra-ui/react";
@@ -29,22 +30,36 @@ export const Cart = () => {
         };
     }, shallowEqual);
     let dispatch = useDispatch();
+
+
+    
     useEffect(() => {
         dispatch(getCartProducts());
     }, []);
 
-   let totalprice=0;
-   for(var i=0;i<products.length;i++){
-    if(quantity1[i]===undefined){
-        totalprice+=+products[i].price
-       
-    }else{
-        totalprice+=+products[i].price*(+quantity1[i])
-        console.log(quantity1[i])
+
+
+    let totalprice=0;
+    for(var i=0;i<products?.length;i++){
+        totalprice+=products[i]?.quantity*products[i]?.off_price
     }
-console.log(products[i].price,quantity1[i])
+    useEffect(()=>{
+    dispatch(getCartProducts())
+    },[])
     
-   }
+    const handlechange=(id,value)=>{
+    console.log(value,"line 48")
+    let ob={
+        quantity:+value
+    }
+      dispatch(updateCartdata(id,ob)).then(()=>dispatch(getCartProducts()))
+    
+    console.log(products)
+    
+    }
+
+
+
 
     function HandleCartDelete(id) {
         dispatch(deleteCartdata(id)).then(() => {
@@ -92,7 +107,7 @@ console.log(products[i].price,quantity1[i])
                         <div style={{ width: "75%" }}>
                             {products.map((el, i) => (
                                 <CartMap
-                                setquantity={setquantity}
+                                handlechange={handlechange}
                                     key={i}
                                     {...el}
                                     HandleCartDelete={HandleCartDelete}

@@ -61,23 +61,25 @@ console.log(id)
         navigate("/cart");
     }
     const handleDelivery = () => {};
-
+    const [img,setImg]=useState("")
  
        
    useEffect(()=>{
-    axios.get(`https://determined-gold-jaguar.cyclic.app/women/${id}`)
+    axios.get(`https://json-server-p3iz.onrender.com/women/${id}`)
     .then((res)=>{
         setData(res.data)
         console.log(data)
+        setImg(res.data.images.image1)
     })
 
    },[])
     
    
 console.log(data)
-    const {images,image,title,price,rating}= data
+    const {images,image,title,off_price
+        ,rating}= data
 
-    const [img,setImg]=useState("")
+    
 
 
        return ( 
@@ -108,7 +110,9 @@ console.log(data)
                         </Heading>
                         <br />
                         <Heading as="h4" size="md">
-                            Price : {price &&price} $/-
+                            Price : {off_price
+ &&off_price
+} $/-
                         </Heading>
                         <br />
                         <Button
@@ -204,7 +208,7 @@ console.log(data)
                                 )}
                             </button>
 
-                            <button className="buy-Now" onClick={handleBuy}>
+                            <button className="buy-Now" onClick={AddToCart}>
                                 Buy Now
                             </button>
                         </div>
@@ -217,5 +221,3 @@ console.log(data)
         </>
     );
 };
-
-

@@ -10,6 +10,7 @@ import { getShipping,getPayment } from '../redux/productsRedux/actions';
 import { FaCheck } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router-dom'
 import { BsChevronLeft } from 'react-icons/bs'
+import { getCartProducts } from '../redux/CartReducer/Action'
 
 //import NavbarVastram from '../components/NavbarVastram'
 import image from "../images/img1.png"
@@ -26,12 +27,27 @@ const ReviewPage = () => {
     const { shipping,cart2 } = useSelector(store => store.productsReducer);
     const dispatch = useDispatch();
     console.log(shipping,cart2);
-const navigate =useNavigate()
-    useEffect(() => {
-        dispatch(getShipping())
-        
 
-    }, [])
+    const { products, isLoading, isError } = useSelector((store) => {
+        return {
+            products: store.CartReducer.products,
+            isLoading: store.CartReducer.isLoading,
+            isError: store.CartReducer.isError,
+        }
+    });
+const navigate =useNavigate()
+   
+useEffect(() => {
+    dispatch(getShipping())
+    dispatch(getCartProducts());
+}, [])
+
+
+
+let totalprice=0;
+for(var i=0;i<products?.length;i++){
+    totalprice+=products[i]?.quantity*products[i]?.off_price
+}
 
 
 const handledone=()=>{
@@ -144,7 +160,7 @@ const handledone=()=>{
                                 <Box>
                                     <Flex alignItems={'center'} justifyContent={'space-between'} width={'100%'}>
                                         <Text fontWeight={'400'}>SubTotal (x7 items)</Text>
-                                        <Text fontWeight={'400'}  >$ 4603</Text>
+                                        <Text fontWeight={'400'}  >${totalprice}</Text>
                                     </Flex>
                                     <Flex alignItems={'center'} justifyContent={'space-between'} width={'100%'}>
                                         <Text fontWeight={'400'}>Est. Shipping (vastram)</Text>
@@ -154,10 +170,10 @@ const handledone=()=>{
                                 <Box>
                                     <Flex alignItems={'center'} justifyContent={'space-between'} width={'100%'}>
                                         <Text fontWeight={'600'}>Estimated Total</Text>
-                                        <Text fontWeight={'600'}  >$ 4603</Text>
+                                        <Text fontWeight={'600'} >${totalprice}</Text>
                                     </Flex>
                                     <Text>
-                                        or 4 interest-free payments of $ 6537.57 with
+                                        or 4 interest-free payments of ${Math.floor(totalprice/4)} with
                                     </Text>
                                     <Image src={afterpay} alt='afterpay' width={'30%'} height={'60%'} />
 
@@ -174,14 +190,14 @@ const handledone=()=>{
                                 <Text fontWeight={'400'} color={'blue'} as='u'  >Edit</Text>
                             </Flex>
 
-                            <Text fontWeight={'600'}>{shipping.firstname} {shipping.lastname}</Text>
-                            <Text>{shipping.address1}</Text>
-                            <Text>{shipping.address2}</Text>
-                            <Text>{shipping.city} {shipping.state} {shipping.zipcode}</Text>
-                            <Text>{shipping.phone}</Text>
+                            <Text fontWeight={'600'}>{shipping?.firstname} {shipping?.lastname}</Text>
+                            <Text>{shipping?.address1}</Text>
+                            <Text>{shipping?.address2}</Text>
+                            <Text>{shipping?.city} {shipping?.state} {shipping?.zipcode}</Text>
+                            <Text>{shipping?.phone}</Text>
                         </Box>
                         <Box>
-                            <Text>Method : {shipping.order}</Text>
+                            <Text>Method : {shipping?.order}</Text>
 
                         </Box>
                     </Stack>
@@ -193,11 +209,11 @@ const handledone=()=>{
                                 <Text fontWeight={'400'} color={'blue'} as='u'  >Edit</Text>
                             </Flex>
 
-                            <Text fontWeight={'600'}>{shipping.firstname} {shipping.lastname}</Text>
-                            <Text>{shipping.address1}</Text>
-                            <Text>{shipping.address2}</Text>
-                            <Text>{shipping.city} {shipping.state} {shipping.zipcode}</Text>
-                            <Text>{shipping.phone}</Text>
+                            <Text fontWeight={'600'}>{shipping?.firstname} {shipping?.lastname}</Text>
+                            <Text>{shipping?.address1}</Text>
+                            <Text>{shipping?.address2}</Text>
+                            <Text>{shipping?.city} {shipping?.state} {shipping?.zipcode}</Text>
+                            <Text>{shipping?.phone}</Text>
                         </Box>
 
                     </Stack>

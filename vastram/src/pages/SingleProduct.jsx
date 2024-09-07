@@ -10,7 +10,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import styles from "./Single.modules.css";
-
+// import StarPurple500Icon from "@mui/icons-material/StarPurple500";
 import { postCartRequest } from "../redux/CartReducer/Action";
 import { useDispatch } from "react-redux";
 import Swal from "sweetalert2";
@@ -62,22 +62,23 @@ console.log(id)
     }
     const handleDelivery = () => {};
 
- 
+    const [img,setImg]=useState("")
        
    useEffect(()=>{
-    axios.get(`https://determined-gold-jaguar.cyclic.app/men/${id}`)
+    axios.get(`https://json-server-p3iz.onrender.com/men/${id}`)
     .then((res)=>{
         setData(res.data)
         console.log(data)
+        setImg(res.data.images.image1)
     })
 
    },[])
     
    
 console.log(data)
-    const {images,image,title,price,rating}= data
+    const {images,image,title,price,off_price,rating}= data
 
-    const [img,setImg]=useState("")
+   
 
 
        return ( 
@@ -108,7 +109,7 @@ console.log(data)
                         </Heading>
                         <br />
                         <Heading as="h4" size="md">
-                            Price : {price &&price} $/-
+                            Price : {off_price &&off_price} $/-
                         </Heading>
                         <br />
                         <Button
