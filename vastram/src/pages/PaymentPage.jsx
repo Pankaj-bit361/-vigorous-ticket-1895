@@ -28,7 +28,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import image from "../images/img1.png";
 import { addPayment, getShipping } from "../redux/productsRedux/actions";
-
+import { getCartProducts } from '../redux/CartReducer/Action'
 import { useToast } from "@chakra-ui/react";
 import Swal from "sweetalert2";
 import LargeWithAppLinksAndSocial from "../components/Footer";
@@ -43,6 +43,14 @@ const PaymentPage = () => {
   const [securityCode, setSecurityCode] = useState("");
   //const [data, setData] = useState([])
   const { shipping } = useSelector((store) => store.productsReducer);
+
+  const { products, isLoading, isError } = useSelector((store) => {
+    return {
+        products: store.CartReducer.products,
+        isLoading: store.CartReducer.isLoading,
+        isError: store.CartReducer.isError,
+    };
+});
 
   const dispatch = useDispatch();
   //console.log(shipping);
@@ -87,9 +95,16 @@ const PaymentPage = () => {
   };
 
   useEffect(() => {
+    dispatch(getCartProducts());
     dispatch(getShipping());
-  }, []);
+}, []);
 
+let totalprice=0;
+for(var i=0;i<products?.length;i++){
+    totalprice+=products[i]?.quantity*products[i]?.off_price
+}
+
+ // dispatch(getShipping());
   return (
     <>
       <div>
@@ -216,6 +231,7 @@ const PaymentPage = () => {
                 placeholder=""
                 borderRadius={"none"}
                 value={cardnumber}
+                maxLength={16}
                 onChange={(e) => setCardnumber(e.target.value)}
               />
 
@@ -271,6 +287,7 @@ const PaymentPage = () => {
                 placeholder=""
                 borderRadius={"none"}
                 width={"40%"}
+                maxLength={3}
                 value={securityCode}
                 onChange={(e) => setSecurityCode(e.target.value)}
               />
@@ -445,7 +462,7 @@ const PaymentPage = () => {
                       width={"100%"}
                     >
                       <Text fontWeight={"400"}>SubTotal </Text>
-                      <Text fontWeight={"400"}>$ 4603</Text>
+                      <Text fontWeight={"400"}>${totalprice}</Text>
                     </Flex>
                     <Flex
                       alignItems={"center"}
@@ -463,9 +480,9 @@ const PaymentPage = () => {
                       width={"100%"}
                     >
                       <Text fontWeight={"600"}>Estimated Total</Text>
-                      <Text fontWeight={"600"}>$ 4603</Text>
+                      <Text fontWeight={"600"}>${totalprice}</Text>
                     </Flex>
-                    <Text>or 4 interest-free payments of $657.57 with</Text>
+                    <Text>or 4 interest-free payments of ${Math.floor(totalprice/4)} with</Text>
                     <Image
                       src={afterpay}
                       alt="afterpay"

@@ -1,9 +1,12 @@
-
-//Cart Map
 import { Button } from "@chakra-ui/react";
 import styles from "./Cartmap.module.css";
 
-export const  CartMap=({ images, price, title, id, HandleCartDelete,setquantity})=> {
+export const  CartMap=({ images, price,off_price, title,quantity ,id, HandleCartDelete,handlechange})=> {
+
+const handlequanti=(e)=>{
+let value=e.target.value
+handlechange(id,value)
+}
 
     return (
         <>
@@ -36,9 +39,9 @@ export const  CartMap=({ images, price, title, id, HandleCartDelete,setquantity}
                         style={{
                             borderRadius: "15px",
                         }}
-                        onChange={(e)=>setquantity(e.target.value)}
+                        onChange={handlequanti}
                         name=""
-                        id="">
+                        id="" value={quantity}>
                        
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -52,7 +55,7 @@ export const  CartMap=({ images, price, title, id, HandleCartDelete,setquantity}
                 </div>
                 <div className={styles.Price_div}>
                     <p className={styles.subdiv_headings}>PRICE</p>
-                    <p> $ {price}</p>
+                    <p> $ {off_price}</p>
                     <p>
                         Comp.
                         <br /> Value:$24.95

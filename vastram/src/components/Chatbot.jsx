@@ -5,14 +5,14 @@ import axios from "axios";
 import logo from "../images/HD-Logo.png";
 import { Dictaphone } from "./Dictaphone";
 import "./css/chatbot.css";
-
-
 const init = {
   role: "system",
   content: " Manager of Vastram Eccomerce Website",
 };
 
 //Chat bot
+console.log(process.env.REACT_APP_SECRET_CODE)
+
 export const Chatbot = () => {
   const inputRef = useRef(null);
   const [input, setinput] = useState("");
@@ -34,7 +34,7 @@ export const Chatbot = () => {
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.REACT_APP_OPENAI_SECRET}`,
+            Authorization: `Bearer ${process.env.REACT_APP_SECRET_CODE}`,
           },
         }
       );

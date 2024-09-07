@@ -29,7 +29,7 @@ export const deletesuccess=()=>{
 export const getproducts=(ob)=>async(dispatch)=>{
 
     dispatch(productrequest)
-  return  axios.get(`https://determined-gold-jaguar.cyclic.app/men`,ob)
+  return  axios.get(`https://json-server-p3iz.onrender.com/men`,ob)
     .then((res)=>{
         dispatch(getsuccess(res.data))
     })
@@ -42,7 +42,7 @@ export const getproducts=(ob)=>async(dispatch)=>{
     export const getwomenproducts=(ob)=>async(dispatch)=>{
 
         dispatch(productrequest)
-      return  axios.get(`https://determined-gold-jaguar.cyclic.app/women`,ob)
+      return  axios.get(`https://json-server-p3iz.onrender.com/women`,ob)
         .then((res)=>{
             dispatch(getsuccess(res.data))
         })
@@ -55,7 +55,7 @@ export const getproducts=(ob)=>async(dispatch)=>{
         export const getkidsproducts=(ob)=>async(dispatch)=>{
 
             dispatch(productrequest)
-          return  axios.get(`https://determined-gold-jaguar.cyclic.app/kids`,ob)
+          return  axios.get(`https://json-server-p3iz.onrender.com/kids`,ob)
             .then((res)=>{
                 dispatch(getsuccess(res.data))
             })
