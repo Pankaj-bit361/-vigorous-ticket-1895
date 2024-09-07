@@ -11,12 +11,12 @@ const Widget = () => {
   const [user,setUser] =useState([]);
 
   const displayMen =()=>{
-    axios.get('http://vastram.pankajvashisht.xyz/men').then((res)=>{
+    axios.get('https://json-server-p3iz.onrender.com/men').then((res)=>{
       setMen(res.data);
     })
   }
   const displayWomen =()=>{
-    axios.get('http://vastram.pankajvashisht.xyz/women ').then((res)=>{
+    axios.get('https://json-server-p3iz.onrender.com/women ').then((res)=>{
       setWomen(res.data);
     })
   }

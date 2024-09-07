@@ -65,7 +65,7 @@ console.log(id)
  
        
    useEffect(()=>{
-    axios.get(`http://vastram.pankajvashisht.xyz/women/${id}`)
+    axios.get(`https://json-server-p3iz.onrender.com/women/${id}`)
     .then((res)=>{
         setData(res.data)
         console.log(data)

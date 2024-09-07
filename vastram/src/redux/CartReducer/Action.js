@@ -26,7 +26,7 @@ export const updateCartSuccess = (payload) => {
 export const getCartProducts = () => (dispatch) => {
     dispatch(getCartProductsRequestAction());
    return axios
-     .get("http://vastram.pankajvashisht.xyz/cart")
+     .get("https://json-server-p3iz.onrender.com/cart")
      .then((res) => {
       console.log(res.data,"cartReducer")
        dispatch(getCartProductsSuccessAction(res.data));
@@ -39,7 +39,7 @@ export const getCartProducts = () => (dispatch) => {
 export const postCartRequest = (payload) => (dispatch) => {
     dispatch(getCartProductsRequestAction());
     axios
-      .post("http://vastram.pankajvashisht.xyz/cart", payload)
+      .post("https://json-server-p3iz.onrender.com/cart", payload)
       .then((res) => {
         dispatch(PostCartSuccess(res.data));
       })
@@ -52,7 +52,7 @@ export const postCartRequest = (payload) => (dispatch) => {
 export const deleteCartdata = (id) => (dispatch) => {
     dispatch(getCartProductsRequestAction());
     return axios
-      .delete(`http://vastram.pankajvashisht.xyz/cart/${id}`)
+      .delete(`https://json-server-p3iz.onrender.com/cart/${id}`)
       .then((res) => {
         dispatch(DeleteCartSuccess());
       })
@@ -69,7 +69,7 @@ export const deleteCartdata = (id) => (dispatch) => {
       console.log("hello",id,payload)
         dispatch(getCartProductsRequestAction());
         return axios
-          .patch(`http://vastram.pankajvashisht.xyz/cart/${id}`,payload)
+          .patch(`https://json-server-p3iz.onrender.com/cart/${id}`,payload)
           .then((res) => {
             console.log(res.data.data,"line71 please check")
             dispatch(updateCartSuccess(res.data));

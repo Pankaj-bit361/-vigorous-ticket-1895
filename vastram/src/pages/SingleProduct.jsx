@@ -65,7 +65,7 @@ console.log(id)
     const [img,setImg]=useState("")
        
    useEffect(()=>{
-    axios.get(`http://vastram.pankajvashisht.xyz/men/${id}`)
+    axios.get(`https://json-server-p3iz.onrender.com/men/${id}`)
     .then((res)=>{
         setData(res.data)
         console.log(data)

@@ -65,7 +65,7 @@ console.log(id,"27 line")
  
     useEffect(()=>{
         console.log(data,"line 67")
-        axios.get(`http://vastram.pankajvashisht.xyz/kids/${id}`)
+        axios.get(`https://json-server-p3iz.onrender.com/kids/${id}`)
         .then((res)=>{
             setData(res.data)
             console.log(data,"line 71")
